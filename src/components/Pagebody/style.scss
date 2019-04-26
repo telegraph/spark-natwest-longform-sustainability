@@ -1,0 +1,42 @@
+.pagebody {
+  background-size: 9px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: block;
+  padding: 65px 20px;
+  position: relative;
+  z-index: 2;
+
+  p {
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    margin: 40px auto;
+  }
+}
+
+.ebox {
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+.moi {
+  padding-bottom: 0;
+}
+
+
+@media screen and (max-width: 730px) {
+
+  .pagebody {
+    padding: 12% 20px;
+  }
+}

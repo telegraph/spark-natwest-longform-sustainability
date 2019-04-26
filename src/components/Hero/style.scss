@@ -1,0 +1,58 @@
+.header-block {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+
+  .logo {
+    transition: 1s all;
+    width: 100%;
+    opacity: 0;
+
+    img {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+
+
+  .tg-logo {
+    transition: 1s all;
+    width: 100%;
+    opacity: 0;
+
+    img {
+      width: 80%;
+      max-width: 250px;
+    }
+  }
+
+
+  h1 {
+    font-size: 54px;
+    color: #ffffff;
+    line-height: 125%;
+    text-align: center;
+    opacity: 1;
+    transition: 1s all;
+    margin: 0px 0 20px;
+
+
+    @media (max-width: 600px) {
+      font-size: 32px;
+    }
+  }
+}

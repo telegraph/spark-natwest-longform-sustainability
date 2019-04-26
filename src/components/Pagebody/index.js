@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Pagebody = props => <div>{props.children}</div>;
+import './style.scss';
+
+const Pagebody = props => <div className="pagebody">{props.children}</div>;
 
 export default Pagebody;

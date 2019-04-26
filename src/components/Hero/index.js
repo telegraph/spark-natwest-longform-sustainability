@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Hero = () => <div>Hero</div>;
+import './style.scss';
+
+const Hero = props => <div className="header-block">{props.children}</div>;
 
 export default Hero;
