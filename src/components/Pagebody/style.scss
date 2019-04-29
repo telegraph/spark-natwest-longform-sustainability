@@ -1,14 +1,21 @@
 .pagebody {
-  background-size: 9px;
-  margin: 0 auto;
+  margin: 0 auto auto 8%;
   max-width: 1200px;
   width: 100%;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   padding: 65px 20px;
   position: relative;
   z-index: 2;
 
+  .pagebody__content {
+    display: flex;
+    flex-flow: column;
+  }
+
   p {
+
+    margin-bottom: 15px;
 
     &:first-child {
       margin-top: 0;
@@ -39,4 +46,8 @@
   .pagebody {
     padding: 12% 20px;
   }
+}
+
+.pagebody__content--notitle {
+  margin: auto;
 }

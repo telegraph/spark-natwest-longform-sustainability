@@ -1,5 +1,9 @@
 import React from 'react';
 
+import TelegraphLogo from '../../assets/telegraph-logo.svg';
+import TelegraphLogoMobile from '../../assets/telegraph_diamond_black.svg';
+import NatwestLogo from '../../assets/natwest-logo.svg';
+
 import './style.scss';
 
 const Header = () => (
@@ -7,18 +11,17 @@ const Header = () => (
     <div className="header-bar">
 
       <a href="https://www.telegraph.co.uk/" className="desktop-only">
-        <img className="the-logo" src="../assets/telegraph-logo.svg" alt="The Telegraph" />
+        <img className="the-logo" src={TelegraphLogo} alt="The Telegraph" />
       </a>
 
       <a href="https://www.telegraph.co.uk/" className="mobile-only">
-        <img className="the-logo-mobile" src="../assets/telegraph_diamond_black.svg" alt="The Telegraph" />
+        <img className="the-logo-mobile" src={TelegraphLogoMobile} alt="The Telegraph" />
       </a>
 
       <div className="btyb-wrapper">
         <span className="btyb">Brought to you by</span>
         <a rel="nofollow" href="https://flights.etihad.com/en/dct-abudhabi-uk" target="_blank">
-          <img className="btyb-btn primary" src="../assets/logos/etihad_small_logo.svg" />
-          <img className="btyb-btn secondary" src="../assets/logos/abu_dhabi_logo.svg" />
+          <img className="btyb-btn primary" src={NatwestLogo} />
         </a>
       </div>
     </div>

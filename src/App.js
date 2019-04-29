@@ -12,6 +12,10 @@ import Pullquote from './components/Pullquote';
 import CTA from './components/CTA';
 import Button from './components/Button';
 import Title from './components/Title';
+import Timeline from './components/Timeline';
+import Slider from './components/Slider';
+import BasicSlider from './components/BasicSlider';
+import VerticalSlider from './components/VerticalSlider';
 import Related from './components/Related';
 import Credits from './components/Credits';
 import Footer from './components/Footer';
@@ -22,20 +26,22 @@ function App() {
       <Header />
       <Nav />
       <Hero>
-        <h1>The future of sustainability</h1>
-        <p>
-          Corporate social responsibility is big business - but how can UK business-owners embed sustainability into their workplace cultures?
-        </p>
+        <div className="hero__content">
+          <h1>The future of sustainability</h1>
+          <p>
+            Corporate social responsibility is big business - but how can UK business-owners embed sustainability into their workplace cultures?
+          </p>
+        </div>
       </Hero>
-      <Pullquote>
-        <h2>If we damage the natural world, we damage ourselves</h2>
-        <p>
-          Sir David Attenborough said in his interview with Prince William at the World Economic Forum at Davos in January
-        </p>
-      </Pullquote>
       <Pagebody>
-        <Dropcap />
+        <Pullquote specialQuote>
+          <h3>If we damage the natural world, we damage ourselves</h3>
+          <p>
+            Sir David Attenborough said in his interview with Prince William at the World Economic Forum at Davos in January
+          </p>
+        </Pullquote>
         <p>
+          <Dropcap>T</Dropcap>
           hanks to television shows such as Sir David’s Blue Planet II, public
           awareness of issues like sustainability has never been higher.
         </p>
@@ -49,7 +55,8 @@ function App() {
           Research by NatWest found that Britain’s medium-sized businesses are responding to this trend, with 57.5pc saying that sustainability is “extremely” or “very” influential in their decision making*.
         </p>
       </Pagebody>
-      <Pagebody>
+      <Timeline />
+      <Pagebody title="Corporate social responsibility">
         <p>
           The mindset of companies has shifted since the emergence of corporate
           social responsibility (CSR) programmes, says Rob Cameron, of
@@ -64,15 +71,13 @@ function App() {
           (£15.08bn) on CSR in 2015, according to Unesco.
         </p>
         <Pullquote>
-          <h2>
-            More than 90% of the world’s top 250 companies now produce an annual report on CSR
-          </h2>
+          <h3>
+            More than 90% of the world’s top 250 companies now produce an annual report on CSR
+          </h3>
           <p>
             according to consultants KPMG
           </p>
         </Pullquote>
-      </Pagebody>
-      <Pagebody>
         <p>
           This change initially came from the environmental movement, Mr Cameron says, but CSR now takes in social concerns, and is increasingly central to the way that companies work.
         </p>
@@ -89,17 +94,18 @@ function App() {
           “Increasingly all businesses act that way: responsibility is integrated into the core of the business,” he says.
         </p>
       </Pagebody>
-      <Pagebody>
+      <Slider />
+      <Pagebody title="Why do modern businesses need to be more sustainable?">
         <p>
           When scientists moved the hands of the Doomsday Clock to two minutes to midnight this year, it was the closest the hands have stood to 12 (symbolising the end of the world) since the height of the Cold War nuclear arms race.
         </p>
         <p>
           We are running out of time to address climate change, the scientists warned – so concerns about sustainability are becoming mainstream, says James Robey, global head of sustainability at analyst firm Capgemini.
         </p>
-        <Pullquote>
-          <h2>
+        <Pullquote quote>
+          <h3>
             Edelman’s 2019 Trust barometer has shown an 11-point increase to 76% of the general population agreeing that business leaders should take a lead on these issues
-          </h2>
+          </h3>
           <p>
             says Dr Robey
           </p>
@@ -116,19 +122,20 @@ function App() {
         <p>
           As sustainability has become more important to companies, it has caused a shift in mindset.
         </p>
-        <Pullquote>
+        <Pullquote quote>
           <p>
             Companies have moved beyond perceiving it as a risk agenda to seeing opportunities for value creation – to a way to create purpose.
           </p>
-          <h2>
+          <h3>
             What is the purpose of our business, beyond the pursuit of profit? A cultural shift is taking place in boardrooms
-          </h2>
+          </h3>
           <p>
             says Mr Cameron
           </p>
         </Pullquote>
+        <VerticalSlider />
       </Pagebody>
-      <Pagebody>
+      <Pagebody title="How can mid-market businesses become more sustainable?">
         <p>
           The steps that companies can take to become more sustainable are not enormously different to how businesses work day-to-day, says business innovation expert Erica Wolfe-Murray.
         </p>
@@ -141,10 +148,10 @@ function App() {
         <p>
           “Supply chains are responsible for most of the emissions that aggravate climate change impacts,” he says.
         </p>
-        <Pullquote>
-          <h2>
-            About 60% of the carbon footprint of a manufacturing company is in the supply chain
-          </h2>
+        <Pullquote quote>
+          <h3>
+            About 60% of the carbon footprint of a manufacturing company is in the supply chain
+          </h3>
           <p>
             and for retailers this is as high as 80%. The supply-chain exposure to human rights and social issues is equally high
           </p>
@@ -159,9 +166,9 @@ function App() {
           <p>
             Among larger companies that export globally, sustainability is becoming ever more important, with
           </p>
-          <h2>
+          <h3>
             73.5% agreeing that sustainability is important, according to NatWest research
-          </h2>
+          </h3>
         </Pullquote>
         <p>
           Even for medium-sized businesses, frameworks such as the UN Sustainable Development Goals (SDGs) are a useful yardstick, says Prof Wendy Chapple, of Nottingham Business School.
@@ -173,17 +180,18 @@ function App() {
           Prof Chapple says: “Small and medium-sized businesses are often surprised to see that what they are currently doing is in line with the goals. It is a good way to start asking, ‘What could we do better?’ ”
         </p>
       </Pagebody>
-      <Pagebody>
+      <Timeline />
+      <Pagebody title="Barriers and opportunities for sustainability in midsized companies">
         <p>
           Becoming sustainable is not without pitfalls. Last year, supermarket chain Iceland partnered with Greenpeace on an advert about palm oil, but campaigners then claimed that the chain had not removed palm oil from all its own products.
         </p>
-        <Pullquote>
+        <Pullquote quote>
           <p>
             Martin Newman, chairman of the Customer First Group, says:
           </p>
-          <h2>
+          <h3>
             Practise what you preach
-          </h2>
+          </h3>
           <p>
             When you stick your head above the parapet and claim to be socially responsible, you need to ensure you are delivering this across the board
           </p>
@@ -198,9 +206,9 @@ function App() {
           He says: “Businesses feel pressure to balance their short-term bottom line. Technology can help bridge this gap by delivering cost efficiencies while also helping to reduce a company’s environmental impact. For example, connected devices can control environmental conditions in food supply chains to stop food spoiling and reduce waste.”
         </p>
         <Pullquote>
-          <h2>
+          <h3>
             NatWest research shows that 72.7% of midsized British companies have invested in new technology for efficiency
-          </h2>
+          </h3>
         </Pullquote>
         <p>
           British businesses are also embracing energy audits as a way to improve sustainability, with 74.7pc having conducted an energy efficiency audit, NatWest research has shown.
@@ -212,7 +220,8 @@ function App() {
           Sustainability also makes good financial sense, and many companies will see instant savings, says Laura Timlin, director at the Carbon Trust, which certifies businesses on their carbon use. She says: “Sustainability is a journey. We know from experience that most businesses will have lots of quick wins that bring immediate cost savings, especially through energy efficiency opportunities.”
         </p>
       </Pagebody>
-      <Pagebody>
+      <BasicSlider />
+      <Pagebody title="Looking to the future">
         <p>
           “I could never understand why we were having the conversation. If you can do things a better way, why not?
         </p>
@@ -222,10 +231,10 @@ function App() {
         <p>
           In fact, by next year millennials will make up more than a third of the workforce worldwide, according to research by ManpowerGroup.
         </p>
-        <Pullquote>
-          <h2>
+        <Pullquote quote>
+          <h3>
             I can’t believe how much time I have spent in the past 25 years discussing whether sustainability is good or bad for business
-          </h2>
+          </h3>
           <p>
             says Mr Gibbons
           </p>
@@ -236,10 +245,10 @@ function App() {
         <p>
           Mr Turner says: “Ultimately we see these businesses as the leaders, showing that you can have a really positive impact on the world, and still be really profitable and sustainable over the long term.”
         </p>
-        <Pullquote>
-          <h2>
+        <Pullquote quote>
+          <h3>
             Our aim is for these leaders toinspire others that business can bea force for good
-          </h2>
+          </h3>
           <p>
             says Mr Turner
           </p>

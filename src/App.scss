@@ -49,7 +49,7 @@ p {
   font-size: 17px;
   line-height: 25px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 20px;
   font-family: Georgia, serif;
   pointer-events: auto;
@@ -115,4 +115,28 @@ h3 {
 #app {
   z-index: 2;
   position: relative;
+}
+
+@font-face {
+  font-family: 'RN House Sans';
+  src: url('./assets/fonts/RNHouseSans-Regular.eot');
+  src: url('./assets/fonts/RNHouseSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/RNHouseSans-Regular.woff2') format('woff2'),
+      url('./assets/fonts/RNHouseSans-Regular.woff') format('woff'),
+      url('./assets/fonts/RNHouseSans-Regular.ttf') format('truetype'),
+      url('./assets/fonts/RNHouseSans-Regular.svg#RNHouseSans-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RN House Sans';
+  src: url('./assets/fonts/RNHouseSans-Bold.eot');
+  src: url('./assets/fonts/RNHouseSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/RNHouseSans-Bold.woff2') format('woff2'),
+      url('./assets/fonts/RNHouseSans-Bold.woff') format('woff'),
+      url('./assets/fonts/RNHouseSans-Bold.ttf') format('truetype'),
+      url('./assets/fonts/RNHouseSans-Bold.svg#RNHouseSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }

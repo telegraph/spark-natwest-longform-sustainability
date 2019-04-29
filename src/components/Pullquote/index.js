@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Pullquote = props => <div>{props.children}</div>;
+import './style.scss';
+
+const Pullquote = props => (
+  <div className={`pullquote ${props.quote ? 'pullquote--withquote' : ''} ${props.specialQuote ? 'pullquote--special' : ''}`}>
+    {props.children}
+  </div>
+);
 
 export default Pullquote;
