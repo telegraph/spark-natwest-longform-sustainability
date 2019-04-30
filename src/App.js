@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 
 import Loader from './components/Loader';
@@ -20,10 +20,31 @@ import Related from './components/Related';
 import Credits from './components/Credits';
 import Footer from './components/Footer';
 
+
 function App() {
+
+  const [progress, setProgress] = useState(0);
+
+  const changeProgress = () => {
+    let progressState = progress;
+    const height = document.body.scrollHeight;
+    const scrolled = window.scrollY;
+    console.log({height}, {scrolled});
+    const difference = height + scrolled;
+    const percentage = difference / height -1;
+    progressState = percentage;
+    console.log(percentage);
+    setProgress(progressState);
+  };
+
+  useEffect(() => {
+    // on mount
+    document.addEventListener('scroll', changeProgress);
+  });
+
   return (
     <>
-      <Header />
+      <Header progress={progress} />
       <Nav />
       <Hero>
         <div className="hero__content">

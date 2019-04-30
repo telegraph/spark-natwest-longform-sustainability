@@ -1,12 +1,14 @@
 import React from 'react';
 
+import ProgressBar from '../ProgressBar';
+
 import TelegraphLogo from '../../assets/telegraph-logo.svg';
 import TelegraphLogoMobile from '../../assets/telegraph_diamond_black.svg';
 import NatwestLogo from '../../assets/natwest-logo.svg';
 
 import './style.scss';
 
-const Header = () => (
+const Header = (props) => (
   <div className="header">
     <div className="header-bar">
 
@@ -25,6 +27,7 @@ const Header = () => (
         </a>
       </div>
     </div>
+    <ProgressBar progress={props.progress} />
   </div>
 );
 
