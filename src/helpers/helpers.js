@@ -1,5 +1,5 @@
 // Triggers animation change when element becomes visible
-// state (visible state), setState (set the visibility state), ref (DOM element)
+// state (visible state of component), setState (set the visibility state), ref (DOM element)
 const makeVisible = (state, setState, ref) => {
   let distance = state;
   const currentTitle = ref.current.getBoundingClientRect().top - window.innerHeight;
@@ -7,10 +7,27 @@ const makeVisible = (state, setState, ref) => {
     distance = currentTitle;
     if (distance < -200) {
       setState(1);
-    } else if (distance < 0 && state) {
-      setState(0);
     }
   });
 };
 
-export default makeVisible;
+export const executeOnScroll = (f) => {
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    lastKnownScrollPosition = window.scrollY;
+    console.log(lastKnownScrollPosition);
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        f(lastKnownScrollPosition);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
+};
+
+export default [makeVisible, executeOnScroll];

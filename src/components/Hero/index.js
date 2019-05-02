@@ -3,7 +3,7 @@ import ReadMore from '../ReadMore';
 
 import './style.scss';
 
-const Hero = () => (
+const Hero = props => (
   <div className="hero">
     <div className="hero__content">
       <h1>The future<br /> of sustainability</h1>
@@ -12,7 +12,7 @@ const Hero = () => (
       </p>
     </div>
     <div className="hero__art">
-      Art Here
+      <img src={props.img} alt="Hero" />
     </div>
     <ReadMore content="Scroll to read on" />
   </div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 
+import responsibilityTimeline from './data';
+
 import Loader from './components/Loader';
 import Header from './components/Header';
 import Share from './components/Share';
@@ -21,32 +23,42 @@ import Credits from './components/Credits';
 import Footer from './components/Footer';
 
 
-function App() {
+import heroImg from './assets/hero_desktop.svg';
+import heroImgMobile from './assets/hero_desktop.svg';
+import csrTitle from './assets/titles/house_light.svg';
+import whydoTitle from './assets/titles/doomsday_light.svg';
+import howcanTitle from './assets/titles/bricks_dark.svg';
+import barriersTitle from './assets/titles/oil_light.svg';
+import lookingTitle from './assets/titles/car_light.svg';
 
+function App() {
   const [progress, setProgress] = useState(0);
 
   const changeProgress = () => {
-    let progressState = progress;
-    const height = document.body.scrollHeight;
-    const scrolled = window.scrollY;
-    console.log({height}, {scrolled});
-    const difference = height + scrolled;
-    const percentage = difference / height -1;
-    progressState = percentage;
-    console.log(percentage);
-    setProgress(progressState);
+    window.requestAnimationFrame(() => {
+      let progressState = progress;
+      const height = document.body.scrollHeight;
+      const scrolled = window.scrollY;
+      const difference = height + scrolled;
+      const percentage = difference / height - 1;
+      progressState = percentage;
+      setProgress(progressState);
+    });
   };
 
   useEffect(() => {
     // on mount
     document.addEventListener('scroll', changeProgress);
+    return function cleanup() {
+      document.removeEventListener('scroll', changeProgress);
+    };
   });
 
   return (
     <>
       <Header progress={progress} />
       <Nav />
-      <Hero>
+      <Hero img={heroImg}>
         <div className="hero__content">
           <h1>The future of sustainability</h1>
           <p>
@@ -76,8 +88,8 @@ function App() {
           Research by NatWest found that Britain’s medium-sized businesses are responding to this trend, with 57.5pc saying that sustainability is “extremely” or “very” influential in their decision making*.
         </p>
       </Pagebody>
-      <Timeline />
-      <Pagebody title="Corporate social responsibility">
+      <Timeline title="Corporate and social responsibility timeline" items={responsibilityTimeline} />
+      <Pagebody title="Corporate social responsibility" img={csrTitle}>
         <p>
           The mindset of companies has shifted since the emergence of corporate
           social responsibility (CSR) programmes, says Rob Cameron, of
@@ -116,7 +128,7 @@ function App() {
         </p>
       </Pagebody>
       <Slider />
-      <Pagebody title="Why do modern businesses need to be more sustainable?">
+      <Pagebody title="Why do modern businesses need to be more sustainable?" img={whydoTitle}>
         <p>
           When scientists moved the hands of the Doomsday Clock to two minutes to midnight this year, it was the closest the hands have stood to 12 (symbolising the end of the world) since the height of the Cold War nuclear arms race.
         </p>
@@ -156,7 +168,7 @@ function App() {
         </Pullquote>
         <VerticalSlider />
       </Pagebody>
-      <Pagebody title="How can mid-market businesses become more sustainable?">
+      <Pagebody title="How can mid-market businesses become more sustainable?" img={howcanTitle}>
         <p>
           The steps that companies can take to become more sustainable are not enormously different to how businesses work day-to-day, says business innovation expert Erica Wolfe-Murray.
         </p>
@@ -201,8 +213,8 @@ function App() {
           Prof Chapple says: “Small and medium-sized businesses are often surprised to see that what they are currently doing is in line with the goals. It is a good way to start asking, ‘What could we do better?’ ”
         </p>
       </Pagebody>
-      <Timeline />
-      <Pagebody title="Barriers and opportunities for sustainability in midsized companies">
+      {/* <Timeline /> */}
+      <Pagebody title="Barriers and opportunities for sustainability in midsized companies" img={barriersTitle}>
         <p>
           Becoming sustainable is not without pitfalls. Last year, supermarket chain Iceland partnered with Greenpeace on an advert about palm oil, but campaigners then claimed that the chain had not removed palm oil from all its own products.
         </p>
@@ -242,7 +254,7 @@ function App() {
         </p>
       </Pagebody>
       <BasicSlider />
-      <Pagebody title="Looking to the future">
+      <Pagebody title="Looking to the future" img={lookingTitle}>
         <p>
           “I could never understand why we were having the conversation. If you can do things a better way, why not?
         </p>
