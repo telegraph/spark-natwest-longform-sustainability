@@ -10,7 +10,7 @@ import thermometer from './assets/respo-timeline/thermometre_light.svg';
 import uk from './assets/respo-timeline/uk_light.svg';
 
 
-const responsibilityTimeline = [
+export const responsibilityTimeline = [
   {
     id: 0,
     img: handsShaking,
@@ -73,4 +73,56 @@ const responsibilityTimeline = [
   },
 ];
 
-export default responsibilityTimeline;
+export const officeSlider = [
+  {
+    copy: 'Buildings have been energy-audited to improve efficiency',
+  },
+  {
+    copy: 'LED bulbs cut electricity use, and occupancy sensors turn them off when not in use',
+  },
+  {
+    copy: 'Heating systems only come on when needed and not during office hours',
+  },
+  {
+    copy: 'Electrical equipment powers down when not in use',
+  },
+  {
+    copy: 'Office waste is recycled, as are supplies such as printer cartridges',
+  },
+  {
+    copy: 'The offices use environmentally friendly cleaning products',
+  },
+  {
+    copy: 'The company has a deal with an environmentally friendly energy supplier',
+  },
+  {
+    copy: 'Emissions are offset via investment in projects that reduce carbon dioxide emissions',
+  },
+  {
+    copy: 'The company uses only hybrid or electric vehicles',
+  },
+  {
+    copy: 'Customers are encouraged to repair and reuse products',
+  },
+  {
+    copy: 'Employees donate hours to volunteer organisations',
+  },
+  {
+    copy: 'Office appliances are chosen to be energy-efficient',
+  },
+  {
+    copy: 'The company partners with local environment groups',
+  },
+  {
+    copy: 'Suppliers are carefully monitored to ensure they are ethical and sustainable',
+  },
+  {
+    copy: 'Paper use is limited in the office, and only supplies that are forest-positive (not contributing to deforestation) are used',
+  },
+  {
+    copy: 'Employees are encouraged to car-share and cycle to work',
+  },
+  {
+    copy: 'Employees work from home when needed, cutting transport hours',
+  },
+];

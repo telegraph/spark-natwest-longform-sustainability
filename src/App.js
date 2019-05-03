@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 
-import responsibilityTimeline from './data';
+import { responsibilityTimeline } from './data';
 
 import Loader from './components/Loader';
 import Header from './components/Header';
