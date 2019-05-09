@@ -1,11 +1,10 @@
 .scrollGallery {
   width: 100%;
-  height: 1000vh;
   overflow: hidden;
   position: relative;
 
   .scrollGallery__title {
-    font-family: 'RN House Sans', arial, sans-serif;
+    font-family: "RN House Sans", arial, sans-serif;
     font-weight: bold;
     font-size: 50px;
     line-height: 50px;
@@ -32,14 +31,13 @@
 
     .gradient {
       position: absolute;
-      background: rgba(0, 0, 0, .2);
+      background: rgba(0, 0, 0, 0.2);
       height: 100%;
       width: 100%;
       z-index: 999;
     }
 
     &.bottom {
-
       bottom: 0;
     }
 
@@ -55,7 +53,7 @@
 
       h4 {
         text-align: center;
-        font-family: 'RN House Sans', arial, sans-serif;
+        font-family: "RN House Sans", arial, sans-serif;
         font-size: 30px;
         line-height: 30px;
         font-weight: normal;
@@ -78,7 +76,6 @@
         width: 300px;
         height: 300px;
       }
-
     }
   }
 
@@ -89,8 +86,7 @@
     right: 0%;
     bottom: 0%;
     left: 0%;
-    background: #43305C;
+    background: #43305c;
     z-index: 2;
   }
-
 }

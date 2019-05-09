@@ -1,0 +1,98 @@
+.basic-slider {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: #43305c;
+  position: relative;
+  min-height: 600px;
+
+  .basic-slider__title {
+    font-family: "RN House Sans", arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    max-width: 55%;
+    margin: 20px 0 0;
+  }
+
+  .basic-slider__container {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .basic-slider__item {
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    justify-content: space-evenly;
+    p {
+      color: #fff;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .img-container {
+      position: relative;
+    }
+
+    .img-photo {
+      max-width: 300px;
+    }
+
+    .img-logo {
+      max-width: 100px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .visible {
+    opacity: 1;
+  }
+
+  .controls {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 5;
+
+    .arrow {
+      width: 50px;
+      padding-bottom: 50px;
+      background-color: #00b6be;
+      border-radius: 100%;
+      cursor: pointer;
+      background-image: url(../../assets/r-arrow.svg);
+      background-size: 35%;
+      background-position: 55% 50%;
+      background-repeat: no-repeat;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.left-arrow {
+        float: left;
+        transform: rotate(180deg);
+      }
+
+      &.right-arrow {
+        float: right;
+      }
+
+      &.noclick {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+    }
+  }
+}
