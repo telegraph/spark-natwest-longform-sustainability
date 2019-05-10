@@ -73,6 +73,16 @@
       height: 3px;
       background: #6f2c91;
 
+      &:before {
+        background: #6f2c91;
+        height: 3px;
+        position: absolute;
+        content: "";
+        display: block;
+        width: calc(100% + 14px);
+        margin-left: -7px;
+      }
+
       .line-marker {
         position: absolute;
         top: -7px;

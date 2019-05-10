@@ -15,7 +15,7 @@ function Slider() {
 
   function calcItemProgress() {
     // works out gap between each point
-    const changeValue = 100 / items.length;
+    const changeValue = 100 / (items.length - 1);
     // * the current item by the gap distance
     const calcProgress = currentItem * changeValue;
     // set it as state
