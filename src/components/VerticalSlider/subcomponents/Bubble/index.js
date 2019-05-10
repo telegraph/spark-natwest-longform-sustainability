@@ -10,8 +10,7 @@ function Bubble(props) {
   const moveBubble = () => {
     // paralax bubble
     const distance = bubble.current.getBoundingClientRect().top - window.innerHeight;
-    console.log(distance);
-    if (distance < 0) { // IF DISTANCE 0 BUT ALSO IF ITS NOT BOTTOM OF SLIDER (USE HEIGHT PROP)
+    if (distance < 0 && props.conDimen.bottom > 0) {
       const scrollAmount = scrollIncrement;
       const calcScroll = props.scrolled * scrollAmount;
       setScrollMove(calcScroll);
@@ -20,6 +19,7 @@ function Bubble(props) {
 
   const bubbleFade = () => {
     window.requestAnimationFrame(() => {
+      // Calc distance from top and bottom of page and implement fade from 0-1
       const distance = bubble.current.getBoundingClientRect().top - window.innerHeight;
       const distanceBottom = bubble.current.getBoundingClientRect().bottom - window.innerHeight;
       const halfWindow = window.innerHeight / 2;
@@ -52,7 +52,7 @@ function Bubble(props) {
 
   return (
     <div className="vertical-item" 
-    style={{ right: `${props.right}%`, top: `${props.top}%`, opacity: `${fade}`, transform: `translate3d(0, ${scrollMove}px, 0)`
+    style={{ right: `${props.right}%`, top: `${props.top}%`, opacity: `${fade}`, transform: `translate3d(0, -${scrollMove}px, 0)`
      }} ref={bubble}>
       <h4>{props.title}</h4>
       <p>{props.copy}</p>

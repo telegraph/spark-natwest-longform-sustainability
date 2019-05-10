@@ -217,7 +217,7 @@ export const verticalSlider = [
     copy:
       'The number of the world’s top 250 companies that produce an annual CSR report, according to KPMG',
     coordTop: '71',
-    coordRight: '20',
+    coordRight: '10',
   },
   {
     stat: '62.4%',

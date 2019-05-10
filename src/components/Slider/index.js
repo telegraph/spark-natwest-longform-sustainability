@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import { officeSlider } from "../../data";
+import { officeSlider } from '../../data';
 
-import officeImg from "../../assets/office.svg";
+import officeSliderCube from '../../assets/office-slider-cube.svg';
 
-import "./style.scss";
+import './style.scss';
 
 function Slider() {
   const [items, setItems] = useState([]);
@@ -14,16 +14,17 @@ function Slider() {
   const points = useRef(null);
 
   function calcItemProgress() {
-    const progressWidth = points.current.offsetWidth;
+    // works out gap between each point
     const changeValue = 100 / items.length;
+    // * the current item by the gap distance
     const calcProgress = currentItem * changeValue;
+    // set it as state
     changeItemProgress(calcProgress);
   }
 
   useEffect(() => {
     // on Mount
     setItems(officeSlider);
-    console.log(points);
   }, []);
 
   useEffect(() => {
@@ -31,17 +32,20 @@ function Slider() {
     calcItemProgress();
   }, [currentItem]);
 
-  function changeItem(index) {
+  function changeItem(index, e) {
     changeCurrentItem(index);
   }
 
   return (
     <div className="slider">
-      <img className="slider__bg" src={officeImg} alt="An office" />
+      <h2 className="slider__title">
+        The sustainable office
+      </h2>
+      <div className="slider__bg" />
       <div className="slider__container">
         {items.map((item, i) => (
           <div
-            className={`container__item ${currentItem === i ? "visible" : ""}`}
+            className={`container__item ${currentItem === i ? 'visible' : ''}`}
           >
             {item.copy}
           </div>
@@ -53,17 +57,24 @@ function Slider() {
             return (
               <div
                 className={`progress-point ${
-                  currentItem === i ? "active" : ""
+                  currentItem === i ? 'active' : ''
                 }`}
-                onClick={() => changeItem(i)}
+                onClick={(e) => changeItem(i, e)}
               />
             );
           })}
         </div>
         <div className="progress-line">
           <div className="line-marker" style={{ left: `${itemProgress}%` }}>
-            O
+            <img src={officeSliderCube} />
           </div>
+
+          {new Array(17).fill().map((_, i) => (
+            <div
+              className="progress-marker"
+              style={{ left: `calc(${100 / 16 * i}%)` }}
+            ></div>
+          ))}
         </div>
       </div>
     </div>
