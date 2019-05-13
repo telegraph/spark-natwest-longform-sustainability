@@ -22,23 +22,26 @@
 
   .slider__container {
     position: absolute;
-    min-width: 470px;
+    min-width: 33%;
     min-height: 150px;
     background: #401663;
     top: 20%;
     right: 50%;
     transform: translateX(50%);
     border-radius: 10px;
+    overflow: hidden;
 
     .container__item {
       position: absolute;
       opacity: 0;
       color: #fff;
       padding: 10% 10%;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s, transform 0.4s;
+      transform: translateX(-100%);
 
       &.visible {
         opacity: 1;
+        transform: translateX(0%);
       }
     }
   }
@@ -80,7 +83,7 @@
 
         img {
           position: absolute;
-          left: -10px;
+          left: -14px;
           height: 30px;
           top: -6px;
         }
@@ -95,4 +98,12 @@
   height: 10px;
   width: 1px;
   background: red;
+}
+
+@media (max-width: 730px) {
+  .slider {
+    .slider__container {
+      min-width: 85%;
+    }
+  }
 }

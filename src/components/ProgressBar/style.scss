@@ -5,3 +5,9 @@
   width: 100%;
   background: #00B6BE;
 }
+
+@media (max-width: 730px) {
+  .progress-bar {
+    height: 5px;
+  }
+}

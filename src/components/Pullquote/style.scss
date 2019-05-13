@@ -96,3 +96,20 @@ background: #00B6BE;
     transform: translateX(50%);
     background: #00B6BE;
   }
+
+  @media (max-width: 730px) {
+    .pullquote {
+      
+      h3 {
+        font-size: 19px;
+        line-height: 24px;
+      }
+
+      &.pullquote--special {
+        h3 {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+    }
+  }

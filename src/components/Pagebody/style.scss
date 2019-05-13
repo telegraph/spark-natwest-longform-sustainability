@@ -17,7 +17,7 @@
   }
 
   p {
-
+    font-size: 15px;
     margin-bottom: 15px;
 
     &:first-child {
@@ -48,6 +48,12 @@
 
   .pagebody {
     padding: 12% 20px;
+    margin: 0 auto;
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
 

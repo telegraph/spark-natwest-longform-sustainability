@@ -20,6 +20,11 @@
     width: 100%;
     margin-left: 0;
     margin-bottom: 10px;
+
+    .art-mobile {
+      display: none;
+    }
+
   }
 
   a {
@@ -71,5 +76,37 @@
   p {
     color: #fff;
     text-align: left;
+  }
+}
+
+@media (max-width: 730px) {
+  .hero {
+    padding: 12% 20px;
+    align-items: flex-end;
+    h1 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+  .hero__content {
+    margin: 11% 0 0 auto;
+  }
+  
+  .hero__art {
+    margin-bottom: 100px;
+  }
+
+  .art-mobile {
+    display: block;
+  }
+
+  .art-desktop {
+    display: none;
+  }
   }
 }

@@ -12,7 +12,8 @@ const Hero = props => (
       </p>
     </div>
     <div className="hero__art">
-      <img src={props.img} alt="Hero" />
+      <img class="art-desktop" src={props.img} alt="Hero" />
+      <img class="art-mobile" src={props.imgMobile} alt="Hero" />
     </div>
     <ReadMore content="Scroll to read on" />
   </div>

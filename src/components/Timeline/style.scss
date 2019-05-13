@@ -8,6 +8,7 @@
     font-weight: bold;
     font-size: 50px;
     line-height: 50px;
+    max-width: 640px;
     position: absolute;
     z-index: 3;
     margin: 0 auto;
@@ -88,5 +89,24 @@
     left: 0%;
     background: #43305c;
     z-index: 2;
+  }
+}
+
+@media (max-width: 730px) {
+  .scrollGallery {
+    .slides {
+      .text-box {
+        .image {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+    
+    .scrollGallery__title {
+      font-size: 24px;
+      line-height: 24px;
+      min-width: 100%;
+    }
   }
 }

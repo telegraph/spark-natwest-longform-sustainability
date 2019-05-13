@@ -15,7 +15,7 @@ function Slider() {
 
   function calcItemProgress() {
     // works out gap between each point
-    const changeValue = 100 / items.length;
+    const changeValue = 100 / (items.length - 1);
     // * the current item by the gap distance
     const calcProgress = currentItem * changeValue;
     // set it as state
@@ -68,13 +68,6 @@ function Slider() {
           <div className="line-marker" style={{ left: `${itemProgress}%` }}>
             <img src={officeSliderCube} />
           </div>
-
-          {new Array(17).fill().map((_, i) => (
-            <div
-              className="progress-marker"
-              style={{ left: `calc(${100 / 16 * i}%)` }}
-            ></div>
-          ))}
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 import React from 'react';
 
+import Tlogo from '../../assets/telegraph_diamond_black.svg';
+
 import './style.scss';
 
 const Footer = () => (
   <div className="row transition footer">
     <div className="wide-content-width">
       <a className="footer-telegraph-link" href="http://www.telegraph.co.uk/">
-        <img className="footer-telegraph-logo" src="../assets/telegraph_diamond.svg" alt="Telegraph logo" />
+        <img className="footer-telegraph-logo" src={Tlogo} alt="Telegraph logo" />
       </a>
       <p className="footer-copy-link">&copy; 2019 Telegraph Media Group Limited</p>
       <ul className="footer-links">

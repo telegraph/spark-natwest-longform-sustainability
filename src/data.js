@@ -1,3 +1,4 @@
+//Timeline imports
 import handsShaking from './assets/respo-timeline/hands_shaking_light.svg';
 import plasticBag from './assets/respo-timeline/bag_strike_light.svg';
 import plasticBagUK from './assets/respo-timeline/bag_light.svg';
@@ -9,14 +10,24 @@ import car from './assets/respo-timeline/car_light.svg';
 import thermometer from './assets/respo-timeline/thermometre_light.svg';
 import uk from './assets/respo-timeline/uk_light.svg';
 
-import patagoniaLogo from './assets/brands/patagonia_logo.png';
-import patagonia from './assets/brands/patagonia_logo.png';
+// Timeline 2 imports
+import plant from './assets/trends-timeline/plant_light.svg';
+import recycle from './assets/trends-timeline/recycle_light.svg';
+import tabletWith from './assets/trends-timeline/tablet_with_boxes_light.svg';
+import tablet from './assets/trends-timeline/tablet_without_boxes_light.svg';
+import van from './assets/trends-timeline/van_light.svg';
+import water from './assets/trends-timeline/water_light.svg';
+import wind from './assets/trends-timeline/wind_light.svg';
+
 
 import interfaceLogo from './assets/brands/interface_logo.png';
-import interfacePhoto from './assets/brands/interface_logo.png';
+import interfacePhoto from './assets/brands/interface_1.png';
 
-import unileverLogo from './assets/brands/unilever_logo.png';
-import unilever from './assets/brands/unilever_logo.png';
+
+import bidfoodLogo from './assets/brands/bidfood_logo.png';
+import bidfood from './assets/brands/bidfood_1.png';
+
+
 
 import menuLogo from './assets/brands/menu_logo.png';
 import menu from './assets/brands/menu_1.png';
@@ -230,22 +241,16 @@ export const verticalSlider = [
 
 export const basicSlider = [
   {
-    img: patagonia,
-    logo: patagoniaLogo,
+    img: bidfood,
+    logo: bidfoodLogo,
     copy:
-      'Outdoor clothing chain Patagonia is a pioneer of sustainable business with a mission statement promising to “build the best product, cause no unnecessary harm, use business to inspire and implement solutions to the environmental crisis”. Patagonia uses organic cotton, and recycled polyester and nylon products, as well as offering a “reuse and recycle” programme. The company’s mission statement includes a promise to donate time, services and at least 1pc of sales to help grassroots organisations around the world.',
+      'Food wholesaler Bidfood launched its ‘Plate 2 Planet’ initiative with Fairtrade Foundation and Fairshare to help pubs and restaurants focus on sustainability in the food business. Bidfood says that 18-20 million tonnes of food is wasted each year in the UK, and half this waste occurs in the food industry. The company also donates meals to charities at all its sites. Heather Angus, HR & Sustainability Director at Bidfood said, ‘Collaboration is the vital ingredient to success in sustainability. Working amongst like-minded businesses to support the industry in making positive change will help any business in achieving its sustainability goals.’',
   },
   {
     img: interfacePhoto,
     logo: interfaceLogo,
     copy:
       'Carpet tile giant Interface was an early innovator in sustainability, with founder Ray Anderson embarking on a mission in the 1990s to turn the company into one of the first sustainable businesses. His goal was to have no negative impact on the environment by 2020 – by eliminating waste and emissions, and using renewable materials and energy. Anderson, who died in 2011, said that his goal was: “We’ll be doing well... very well... by doing good. That’s the vision.”',
-  },
-  {
-    img: unilever,
-    logo: unileverLogo,
-    copy:
-      'Unilever unveiled its Unilever Sustainable Living Plan in 2010, with goals including reducing the company’s environmental footprint by half by 2030. The company says that its Sustainable Living Brands grew 50pc faster than other Unilever brands, and account for 60pc of the company’s growth. A Unilever spokesperson says: “Business growth should not be at the expense of people and the planet. By using our resources as a business to address issues such as health and hygiene, gender equality, climate change and plastic packaging waste, we are delivering short-term and long-term benefits for our shareholders and society.”',
   },
   {
     img: menu,
@@ -275,49 +280,49 @@ export const basicSlider = [
 
 export const trendsImpacting = [
   {
-    img: '',
+    img: tabletWith,
     title: 'Energy audits',
     copy:
       'Auditing energy use and opting for more efficient ways to use it, such as by using smart devices, is a key trend for business, and 66.2pc of British midsized companies have audited their energy use, according to NatWest.',
   },
   {
-    img: '',
+    img: water,
     title: 'Banning single-use plastics',
     copy:
       'Many companies in the UK have stopped utilising single-use plastics, such as straws, in advance of a proposed government ban. The Government estimates that Britain uses 4.7 billion plastic straws a year.',
   },
   {
-    img: '',
+    img: tablet,
     title: 'Paperless office/sustainable print',
     copy:
       'Many companies are cutting down or eliminating their use of paper to try to decrease resource use. Printer company HP aims to have all the paper it supplies globally forest-positive (ie, not contributing to deforestation) by next year.',
   },
   {
-    img: '',
+    img: car,
     title: 'Electric/hybrid vehicles',
     copy:
       'Small and midsized companies are switching to electric or hybrid vehicles, with businesses such as Octopus Investments offering EV fleets on a pence-per-mile basis. According to Bloomberg, 55pc of new car sales and 33pc of the global car fleet will be electric by 2040.',
   },
   {
-    img: '',
+    img: plant,
     title: 'Volunteering',
     copy:
       'Many British companies partner with local charities to offer volunteer time as part of corporate social responsibility programmes. PwC aims to offer 50,000 volunteer hours per year as part of a community programme.',
   },
   {
-    img: '',
+    img: recycle,
     title: 'Recycling',
     copy:
       'Many small and midsized businesses are now attempting to recycle more waste, with the amount of commercial waste in the UK reduced by 15pc (five million tonnes) between 2012 and 2014.',
   },
   {
-    img: '',
+    img: wind,
     title: 'Carbon offsetting',
     copy:
       'As well as reducing emissions, companies can offset carbon use by supporting projects that reduce the emission of greenhouse gases, with organisations such as the Carbon Trust offering certifications for carbon-neutral businesses.',
   },
   {
-    img: '',
+    img: van,
     title: 'Supply chain',
     copy:
       'In industries such as retail, supply chains can account for up to 80pc of a company’s emission of greenhouse gases. Auditing the environmental credentials of suppliers is an essential step for businesses hoping to be more sustainable.',

@@ -10,8 +10,6 @@ a {
   color: #fff;
   text-align: center;
   margin: 0;
-  background: #072A3A;
-  border-top: 5px solid #02BFA6;
 }
 
 .footer .footer-telegraph-link {
@@ -30,14 +28,14 @@ a {
   margin-bottom: 5px;
   margin-top: 5px;
   font-size: 14px;
-  color: #fff;
+  color: #000;
 
   &::after {
     content: "";
     display: block;
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #000;
     margin: 3px auto;
   }
 }
@@ -55,12 +53,12 @@ a {
 .footer ul.footer-links li:first-child {
   padding-right: 10px;
   margin-right: 9px;
-  border-right: 1px solid white;
+  border-right: 1px solid #000;
 }
 
 .footer ul.footer-links li a {
   display: block;
-  color: #fff !important;
+  color: #000 !important;
   font-size: 14px;
   line-height: 1;
   -webkit-font-smoothing: antialiased;

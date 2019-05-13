@@ -22,14 +22,16 @@ import VerticalSlider from "./components/VerticalSlider";
 import Related from "./components/Related";
 import Credits from "./components/Credits";
 import Footer from "./components/Footer";
+import Socials from './components/Socials';
 
 import heroImg from "./assets/hero_desktop.svg";
-import heroImgMobile from "./assets/hero_desktop.svg";
+import heroImgMobile from "./assets/hero_mobile.svg";
 import csrTitle from "./assets/titles/house_light.svg";
 import whydoTitle from "./assets/titles/doomsday_light.svg";
 import howcanTitle from "./assets/titles/bricks_dark.svg";
 import barriersTitle from "./assets/titles/oil_light.svg";
 import lookingTitle from "./assets/titles/car_light.svg";
+import Broughttyb from "./components/Broughttyb";
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -58,7 +60,7 @@ function App() {
     <>
       <Header progress={progress} />
       <Nav />
-      <Hero img={heroImg}>
+      <Hero img={heroImg} imgMobile={heroImgMobile}>
         <div className="hero__content">
           <h1>The future of sustainability</h1>
           <p>
@@ -406,10 +408,13 @@ function App() {
         </p>
       </Pagebody>
       <CTA>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volut pat.</p>
         <Button />
       </CTA>
-      <Related />
+      <Socials />
+      <Broughttyb />
       <Credits />
+      <Related />
       <Footer />
     </>
   );

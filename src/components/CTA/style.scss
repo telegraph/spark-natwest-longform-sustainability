@@ -1,0 +1,36 @@
+.cta {
+  background: #2B1E3E;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+
+  .cta__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    color: #fff;
+    font-family: "RN House Sans", arial, sans-serif;
+    max-width: 560px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 60px;
+  }
+
+}
+
+@media (max-width: 730px) {
+
+  .cta {
+    padding: 0;
+    .cta__inner {
+      flex-flow: column;
+      p{ 
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -23,3 +23,23 @@
   }
 
 }
+
+@media (max-width: 730px) {
+  .title {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 50px;
+    align-items: flex-start;
+
+    h2 {
+      text-align: left;
+      font-size: 25px;
+      line-height: 30px;
+      width: 190px;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+}
