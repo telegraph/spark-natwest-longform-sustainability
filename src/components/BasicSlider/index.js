@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import './style.scss';
 
@@ -7,6 +7,9 @@ import { basicSlider } from '../../data';
 function BasicSlider() {
   const [currentSlide, changeCurrentSlide] = useState(0);
   const [data, setData] = useState([]);
+  const [currentSlideHeight, setCurrentSlideHeight] = useState(0);
+
+  const slide = useRef(null);
 
   const grabData = () => {
     setData(basicSlider);
@@ -29,7 +32,7 @@ function BasicSlider() {
       <h2 className="basic-slider__title">
         Seven sustainable businesses setting the trend
       </h2>
-      <div className="basic-slider__container">
+      <div className="basic-slider__container" style={{height: `${currentSlideHeight}`}}>
         <div className="controls">
           <div
             className={`arrow left-arrow ${currentSlide <= 0 ? 'noclick' : ''}`}
@@ -48,6 +51,7 @@ function BasicSlider() {
               className={`basic-slider__item ${
                 currentSlide === i ? 'visible' : ''
               }`}
+              ref={slide}
             >
               <div class="img-container">
                 <img className="img-photo" src={item.img} />

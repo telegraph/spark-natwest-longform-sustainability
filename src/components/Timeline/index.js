@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+import BackgroundBubble from '../VerticalSlider/subcomponents/BackgroundBubble';
+
 import './style.scss';
 
 function Timeline(props) {
@@ -46,6 +48,24 @@ function Timeline(props) {
   return (
 
     <div className="scrollGallery" ref={timeLine} style={{height: `${computedHeight}`}}>
+    <div id="parallax-container">
+        <BackgroundBubble pos={{ top: '10%', left: '5vw' }} />
+        <BackgroundBubble pos={{ top: '15%', left: '100vw' }} />
+        <BackgroundBubble pos={{ top: '20%', left: '90vw' }} />
+        <BackgroundBubble pos={{ top: '25%', left: '10vw' }} />
+        <BackgroundBubble pos={{ top: '30%', left: '30vw' }} />
+        <BackgroundBubble pos={{ top: '35%', left: '70vw' }} />
+        <BackgroundBubble pos={{ top: '40%', left: '35vw' }} />
+        <BackgroundBubble pos={{ top: '45%', left: '80vw' }} />
+        <BackgroundBubble pos={{ top: '50%', left: '70vw' }} />
+        <BackgroundBubble pos={{ top: '55%', left: '30vw' }} />
+        <BackgroundBubble pos={{ top: '60%', left: '80vw' }} />
+        <BackgroundBubble pos={{ top: '65%', left: '70vw' }} />
+        <BackgroundBubble pos={{ top: '70%', left: '20vw' }} />
+        <BackgroundBubble pos={{ top: '75%', left: '70vw' }} />
+        <BackgroundBubble pos={{ top: '80%', left: '40vw' }} />
+        <BackgroundBubble pos={{ top: '85%', left: '20vw' }} />
+      </div>
       <h3 className={`scrollGallery__title ${fixed ? 'fixed' : ''}`} ref={timelineTitle}>
         {props.title}
       </h3>

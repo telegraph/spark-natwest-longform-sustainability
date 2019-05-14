@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style.scss';
+
 function BackgroundBubble(props) {
 
   return (

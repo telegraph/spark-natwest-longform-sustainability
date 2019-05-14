@@ -32,8 +32,18 @@ function Slider() {
     calcItemProgress();
   }, [currentItem]);
 
-  function changeItem(index, e) {
+  function changeItem(index) {
     changeCurrentItem(index);
+  }
+
+  function prevItem() {
+    let itemState = currentItem;
+    changeCurrentItem(itemState - 1);
+  }
+
+  function nextItem() {
+    let itemState = currentItem;
+    changeCurrentItem(itemState + 1);
   }
 
   return (
@@ -50,6 +60,13 @@ function Slider() {
             {item.copy}
           </div>
         ))}
+      </div>
+      <div className="slider__progress-mobile">
+        <div className={`slider-cont slider-prev ${currentItem < 1 ? 'noclick' : ''}`} onClick={() => prevItem()} />
+        <div className="slider-total">
+          {`${currentItem + 1} of ${items.length}`}
+        </div>
+        <div className={`slider-cont slider-next ${currentItem >= 16 ? 'noclick' : ''}`} onClick={() => nextItem()} />
       </div>
       <div className="slider__progress">
         <div className="progress-points" ref={points}>

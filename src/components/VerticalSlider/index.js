@@ -45,10 +45,14 @@ function VerticalSlider() {
     <div className="vertical-slider" ref={bubbleSlider}>
       <h2 className="vertical-slider__title">Sustainability in numbers</h2>
       <div id="parallax-container">
-        <BackgroundBubble pos={{ top: '10vh', left: '1vw' }} speed={200} conDimen={conDimensions} />
-        <BackgroundBubble pos={{ top: '50vh', left: '20vw' }} speed={80} conDimen={conDimensions} />
-        <BackgroundBubble pos={{ top: '90vh', left: '50vw' }} speed={30} conDimen={conDimensions} />
-        <BackgroundBubble pos={{ top: '75vh', left: '75vw' }} speed={100} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '10%', left: '1vw' }} speed={200} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '30%', left: '20vw' }} speed={80} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '40%', left: '50vw' }} speed={30} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '50%', left: '10vw' }} speed={100} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '60%', left: '30vw' }} speed={100} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '70%', left: '50vw' }} speed={100} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '80%', left: '65vw' }} speed={100} conDimen={conDimensions} />
+        <BackgroundBubble pos={{ top: '90%', left: '45vw' }} speed={100} conDimen={conDimensions} />
       </div>
       <div className="vertical-slider__container">
         {data.map((item, i) => {

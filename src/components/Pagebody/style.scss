@@ -1,12 +1,16 @@
 .pagebody {
-  margin: 0 auto auto 8%;
+  margin: 0 auto;
   max-width: 1200px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 65px 20px;
+  padding: 125px 20px;
   position: relative;
   z-index: 2;
+
+  &.pagebody--notitle {
+    margin: 0 auto;
+  }
 
   .pagebody__content {
     opacity: 0;
@@ -43,6 +47,31 @@
   padding-bottom: 0;
 }
 
+@media (max-width: 970px) {
+  .pagebody {
+    flex-flow: column;
+    .title {
+      max-width: 540px;
+      margin: 0 auto 40px auto;
+
+      .title__content {
+        display: inline-block;
+        text-align: left;
+        max-width: 390px;
+      }
+
+      img {
+        display: inline-block;
+        margin: 0;
+      }
+
+    }
+    .pagebody__content {
+      margin: 0 auto;
+    }
+
+  }
+}
 
 @media screen and (max-width: 730px) {
 

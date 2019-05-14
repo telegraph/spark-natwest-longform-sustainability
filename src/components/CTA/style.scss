@@ -27,9 +27,19 @@
     padding: 0;
     .cta__inner {
       flex-flow: column;
+      align-items: flex-start;
+      margin-left: 25px;
       p{ 
         font-size: 20px;
         line-height: 20px;
+      }
+      .button {
+        padding-left: 0;
+        padding-top: 0;
+        a {
+          font-size: 19px;
+          padding: 12px 14px;
+        }
       }
     }
   }

@@ -7,11 +7,18 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   text-align: center;
 
   .hero__content {
     margin: 11% 0 auto auto;
+    opacity: 0;
+    transform: translateX(-5%);
+    transition: all 0.7s;
+
+    &.visible {
+      transform: translateX(0%);
+      opacity: 1;
+    }
   }
 
   .hero__art {
@@ -20,6 +27,14 @@
     width: 100%;
     margin-left: 0;
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 0.7s 0.2s;
+
+  &.visible-art {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 
     .art-mobile {
       display: none;
@@ -79,6 +94,12 @@
   }
 }
 
+@media (max-width: 970px) {
+  .hero {
+    flex-flow: column;
+  }
+}
+
 @media (max-width: 730px) {
   .hero {
     padding: 12% 20px;
@@ -99,10 +120,10 @@
   
   .hero__art {
     margin-bottom: 100px;
-  }
-
-  .art-mobile {
-    display: block;
+    
+    .art-mobile {
+      display: block;
+    }
   }
 
   .art-desktop {

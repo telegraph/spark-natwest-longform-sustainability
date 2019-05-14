@@ -3,6 +3,17 @@
   overflow: hidden;
   position: relative;
 
+  // .scrollGallery__title:before {
+  //   content: '';
+  //   background: linear-gradient(to bottom, #43305c 0%, rgba(67, 48, 92, 0.85) 84%, rgba(67, 48, 92, 0) 100%);
+  //   height: 300%;
+  //   width: 100%;
+  //   bottom: -33px;
+  //   position: absolute;
+  //   right: 0;
+  //   z-index: -1;
+  // }
+
   .scrollGallery__title {
     font-family: "RN House Sans", arial, sans-serif;
     font-weight: bold;
@@ -17,6 +28,7 @@
     top: 30px;
     color: white;
     transform: translateX(50%);
+    z-index: 6;
   }
 
   .fixed {
@@ -107,6 +119,7 @@
       font-size: 24px;
       line-height: 24px;
       min-width: 100%;
+      z-index: 6;
     }
   }
 }
