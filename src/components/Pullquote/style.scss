@@ -2,6 +2,14 @@
   position: relative;
   padding: 40px 0;
   margin: 40px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+
+  &.visible {
+   opacity: 1;
+   transform: translateY(0);
+  }
 
   h3 {
     font-family: 'RN House Sans', arial, sans-serif;

@@ -6,6 +6,14 @@
   background: #43305c;
   position: relative;
   min-height: 600px;
+  transition: all 0.6s;
+  opacity: 0;
+  transform: translateY(10%);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 
   .basic-slider__title {
     font-family: "RN House Sans", arial, sans-serif;
@@ -14,7 +22,6 @@
     line-height: 50px;
     color: #fff;
     text-align: center;
-    max-width: 46%;
     margin: 40px 0 80px;
   }
 
@@ -31,6 +38,7 @@
     position: absolute;
     opacity: 0;
     width: 100%;
+    padding-bottom: 50px;
     justify-content: center;
     transition: all 0.4s;
     transform: translateX(-100%);
@@ -42,7 +50,8 @@
 
     .img-container {
       position: relative;
-      margin-right: 30px;
+      margin-right: 50px;
+      text-align: center;
     }
 
     .img-photo {
@@ -52,8 +61,8 @@
     .img-logo {
       max-width: 100px;
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: 10px;
+      right: 17px;
     }
   }
 
@@ -64,10 +73,16 @@
 
   .controls {
     width: 100%;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     position: absolute;
     z-index: 5;
+
+    .total {
+      display: none;
+      font-family: "RN House Sans", arial, sans-serif;
+      font-size: 23px;
+    }
 
     .arrow {
       width: 50px;
@@ -79,9 +94,10 @@
       background-size: 35%;
       background-position: 55% 50%;
       background-repeat: no-repeat;
+      transition: all 0.2s;
 
       &:hover {
-        opacity: 0.8;
+        background-color: #516CB3;
       }
 
       &.left-arrow {
@@ -103,14 +119,55 @@
 
 @media (max-width: 730px) {
   .basic-slider {
+    .basic-slider__container {
+      margin: 0 auto 60px;
+      transition: height 0.1s;
+
+      .controls {
+        top: 100%;
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .arrow {
+          width: 40px;
+          padding-bottom: 40px;
+        }
+
+        .total {
+          display: block;
+          color: white;
+          text-align: center;
+          position: absolute;
+          right: 50%;
+          transform: translateX(50%);
+          top: 7px;
+        }
+      }
+
+      .basic-slider__item {
+        .img-container {
+          margin-bottom: 50px;
+          margin-right: 0;
+        }
+      }
+    }
+
     .basic-slider__title {
       font-size: 24px;
       line-height: 24px;
       min-width: 100%;
+      padding: 0 25px;
     }  
 
     .basic-slider__item {
       flex-flow: column;
+
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 auto;
+      }
     }
   }
 }

@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+import makeVisible from '../../hooks/makeVisible';
+
+import Slide from './subcomponents/Slide';
+
 import './style.scss';
 
 import { basicSlider } from '../../data';
@@ -8,8 +12,7 @@ function BasicSlider() {
   const [currentSlide, changeCurrentSlide] = useState(0);
   const [data, setData] = useState([]);
   const [currentSlideHeight, setCurrentSlideHeight] = useState(0);
-
-  const slide = useRef(null);
+  const [bodyContent, isVisible] = makeVisible();
 
   const grabData = () => {
     setData(basicSlider);
@@ -27,17 +30,25 @@ function BasicSlider() {
     grabData();
   }, []);
 
+  const grabSlideRefHeight = (ref) => {
+    const { height } = ref.current.getBoundingClientRect();
+    setCurrentSlideHeight(height);
+  };
+
   return (
-    <div className="basic-slider">
+    <div className={`basic-slider ${isVisible ? 'visible' : ''}`} ref={bodyContent}>
       <h2 className="basic-slider__title">
         Seven sustainable businesses setting the trend
       </h2>
-      <div className="basic-slider__container" style={{height: `${currentSlideHeight}`}}>
+      <div className="basic-slider__container" style={{ height: `${currentSlideHeight}px` }}>
         <div className="controls">
           <div
             className={`arrow left-arrow ${currentSlide <= 0 ? 'noclick' : ''}`}
             onClick={() => prevSlide()}
           />
+          <div className="total">
+            {`${currentSlide + 1} of ${data.length - 1}`}
+          </div>
           <div
             className={`arrow right-arrow ${
               currentSlide >= data.length - 1 ? 'noclick' : ''
@@ -47,18 +58,7 @@ function BasicSlider() {
         </div>
         {data.map((item, i) => {
           return (
-            <div
-              className={`basic-slider__item ${
-                currentSlide === i ? 'visible' : ''
-              }`}
-              ref={slide}
-            >
-              <div class="img-container">
-                <img className="img-photo" src={item.img} />
-                <img className="img-logo" src={item.logo} />
-              </div>
-              <p>{item.copy}</p>
-            </div>
+            <Slide currentSlide={currentSlide} img={item.img} logo={item.logo} copy={item.copy} i={i} getHeight={grabSlideRefHeight} />
           );
         })}
       </div>

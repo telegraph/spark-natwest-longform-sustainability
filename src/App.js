@@ -12,6 +12,7 @@ import Hero from "./components/Hero";
 import Pagebody from "./components/Pagebody";
 import Dropcap from "./components/Dropcap";
 import Pullquote from "./components/Pullquote";
+import PullQuoteSpecial from './components/Pullquote/subcomponents/PullQuoteSpecial';
 import CTA from "./components/CTA";
 import Button from "./components/Button";
 import Title from "./components/Title";
@@ -23,6 +24,7 @@ import Related from "./components/Related";
 import Credits from "./components/Credits";
 import Footer from "./components/Footer";
 import Socials from './components/Socials';
+import AnimationTrigger from './components/AnimationTrigger';
 
 import heroImg from "./assets/hero_desktop.svg";
 import heroImgMobile from "./assets/hero_mobile.svg";
@@ -69,7 +71,7 @@ function App() {
           </p>
         </div>
       </Hero>
-      <Pagebody>
+      <PullQuoteSpecial>
         <Pullquote specialQuote>
           <h3>If we damage the natural world, we damage ourselves</h3>
           <p>
@@ -77,6 +79,8 @@ function App() {
             the World Economic Forum at Davos in January
           </p>
         </Pullquote>
+      </PullQuoteSpecial>
+      <Pagebody>
         <p>
           <Dropcap>T</Dropcap>
           hanks to television shows such as Sir David’s Blue Planet II, public
@@ -127,31 +131,33 @@ function App() {
           </h3>
           <p>according to consultants KPMG</p>
         </Pullquote>
-        <p>
-          This change initially came from the environmental movement, Mr Cameron
-          says, but CSR now takes in social concerns, and is increasingly
-          central to the way that companies work.
-        </p>
-        <p>
-          He says: “The original idea of corporate social responsibility
-          programmes wasn’t actually philanthropy. It was to have companies
-          think deeply about their responsibilities.
-        </p>
-        <p>
-          In Britain, almost two-thirds of companies already invest in corporate
-          social responsibility programmes, research by NatWest shows, with 64pc
-          of midsized businesses having committed to ethical behaviour through
-          corporate social responsibility.
-        </p>
-        <p>
-          “Corporate social responsibility almost isn’t a ‘thing’ any more,”
-          says Giles Gibbons, founder of Good Business, which has advised
-          corporations such as Nike, Microsoft and McDonald’s.
-        </p>
-        <p>
-          “Increasingly all businesses act that way: responsibility is
-          integrated into the core of the business,” he says.
-        </p>
+        <AnimationTrigger>
+          <p>
+            This change initially came from the environmental movement, Mr Cameron
+            says, but CSR now takes in social concerns, and is increasingly
+            central to the way that companies work.
+          </p>
+          <p>
+            He says: “The original idea of corporate social responsibility
+            programmes wasn’t actually philanthropy. It was to have companies
+            think deeply about their responsibilities.
+          </p>
+          <p>
+            In Britain, almost two-thirds of companies already invest in corporate
+            social responsibility programmes, research by NatWest shows, with 64pc
+            of midsized businesses having committed to ethical behaviour through
+            corporate social responsibility.
+          </p>
+          <p>
+            “Corporate social responsibility almost isn’t a ‘thing’ any more,”
+            says Giles Gibbons, founder of Good Business, which has advised
+            corporations such as Nike, Microsoft and McDonald’s.
+          </p>
+          <p>
+            “Increasingly all businesses act that way: responsibility is
+            integrated into the core of the business,” he says.
+          </p>
+        </AnimationTrigger>
       </Pagebody>
       <Slider />
       <Pagebody
@@ -178,26 +184,28 @@ function App() {
           </h3>
           <p>says Dr Robey</p>
         </Pullquote>
-        <p>
-          The impact of climate change has featured in the World Economic
-          Forum’s top five global risks every year since 2011.
-        </p>
-        <p>
-          All this means that large companies increasingly see sustainability as
-          a way to add value, says Mr Cameron. “It’s no longer just start-ups.
-          We’re seeing large well-established companies looking into low-carbon
-          solutions as we transition to a low-carbon economy.”
-        </p>
-        <p>
-          And now it is not only consumers who are demanding that sustainability
-          be baked in to businesses, but also investors, Mr Cameron says. “We’re
-          also seeing interest from the investment community in a really
-          substantial way.”
-        </p>
-        <p>
-          As sustainability has become more important to companies, it has
-          caused a shift in mindset.
-        </p>
+        <AnimationTrigger>
+          <p>
+            The impact of climate change has featured in the World Economic
+            Forum’s top five global risks every year since 2011.
+          </p>
+          <p>
+            All this means that large companies increasingly see sustainability as
+            a way to add value, says Mr Cameron. “It’s no longer just start-ups.
+            We’re seeing large well-established companies looking into low-carbon
+            solutions as we transition to a low-carbon economy.”
+          </p>
+          <p>
+            And now it is not only consumers who are demanding that sustainability
+            be baked in to businesses, but also investors, Mr Cameron says. “We’re
+            also seeing interest from the investment community in a really
+            substantial way.”
+          </p>
+          <p>
+            As sustainability has become more important to companies, it has
+            caused a shift in mindset.
+          </p>
+        </AnimationTrigger>
         <Pullquote quote>
           <p>
             Companies have moved beyond perceiving it as a risk agenda to seeing
@@ -245,21 +253,23 @@ function App() {
             to human rights and social issues is equally high
           </p>
         </Pullquote>
-        <p>
-          Many companies have adopted a “triple bottom line” accounting system,
-          taking into account not only financial but environmental and social
-          results. Such initiatives are popular with consumers, with 85pc of SME
-          bosses saying that they believe customers want them to embrace
-          sustainability, according to NatWest research.
-        </p>
-        <p>
-          Simply starting to monitor such numbers often spurs companies to
-          engage with sustainability in a meaningful way, says Mr Gibbons.
-          “Fundamentally, business people are project-managing,” he says. “The
-          moment you get them to measure something, they have to manage that
-          measurement. If you’re going to measure something like your carbon
-          impact, the next natural thing is to make it lower.”
-        </p>
+        <AnimationTrigger>
+          <p>
+            Many companies have adopted a “triple bottom line” accounting system,
+            taking into account not only financial but environmental and social
+            results. Such initiatives are popular with consumers, with 85pc of SME
+            bosses saying that they believe customers want them to embrace
+            sustainability, according to NatWest research.
+          </p>
+          <p>
+            Simply starting to monitor such numbers often spurs companies to
+            engage with sustainability in a meaningful way, says Mr Gibbons.
+            “Fundamentally, business people are project-managing,” he says. “The
+            moment you get them to measure something, they have to manage that
+            measurement. If you’re going to measure something like your carbon
+            impact, the next natural thing is to make it lower.”
+          </p>
+        </AnimationTrigger>
         <Pullquote>
           <p>
             Among larger companies that export globally, sustainability is
@@ -270,21 +280,23 @@ function App() {
             NatWest research
           </h3>
         </Pullquote>
-        <p>
-          Even for medium-sized businesses, frameworks such as the UN
-          Sustainable Development Goals (SDGs) are a useful yardstick, says Prof
-          Wendy Chapple, of Nottingham Business School.
-        </p>
-        <p>
-          The SDGs are a set of 17 goals developed by the United Nations that
-          set out targets for a more sustainable world by 2030.
-        </p>
-        <p>
-          Prof Chapple says: “Small and medium-sized businesses are often
-          surprised to see that what they are currently doing is in line with
-          the goals. It is a good way to start asking, ‘What could we do
-          better?’ ”
-        </p>
+        <AnimationTrigger>
+          <p>
+            Even for medium-sized businesses, frameworks such as the UN
+            Sustainable Development Goals (SDGs) are a useful yardstick, says Prof
+            Wendy Chapple, of Nottingham Business School.
+          </p>
+          <p>
+            The SDGs are a set of 17 goals developed by the United Nations that
+            set out targets for a more sustainable world by 2030.
+          </p>
+          <p>
+            Prof Chapple says: “Small and medium-sized businesses are often
+            surprised to see that what they are currently doing is in line with
+            the goals. It is a good way to start asking, ‘What could we do
+            better?’ ”
+          </p>
+        </AnimationTrigger>
       </Pagebody>
       <Timeline
         title="Sustainability trends that are impacting businesses"
@@ -309,6 +321,7 @@ function App() {
             board
           </p>
         </Pullquote>
+        <AnimationTrigger>
         <p>
           Staff training in these issues is key, NatWest research has shown.
           Among medium-sized businesses that have embraced sustainability,
@@ -327,12 +340,14 @@ function App() {
           conditions in food supply chains to stop food spoiling and reduce
           waste.”
         </p>
+        </AnimationTrigger>
         <Pullquote>
           <h3>
             NatWest research shows that 72.7% of midsized British companies have
             invested in new technology for efficiency
           </h3>
         </Pullquote>
+        <AnimationTrigger>
         <p>
           British businesses are also embracing energy audits as a way to
           improve sustainability, with 74.7pc having conducted an energy
@@ -351,6 +366,7 @@ function App() {
           businesses will have lots of quick wins that bring immediate cost
           savings, especially through energy efficiency opportunities.”
         </p>
+        </AnimationTrigger>
       </Pagebody>
       <BasicSlider />
       <Pagebody title="Looking to the future" img={lookingTitle}>
@@ -374,6 +390,7 @@ function App() {
           </h3>
           <p>says Mr Gibbons</p>
         </Pullquote>
+        <AnimationTrigger>
         <p>
           Ethical and sustainable businesses will inspire other companies in
           coming decades, says Chris Turner, executive director of B Lab UK. It
@@ -385,6 +402,7 @@ function App() {
           showing that you can have a really positive impact on the world, and
           still be really profitable and sustainable over the long term.”
         </p>
+        </AnimationTrigger>
         <Pullquote quote>
           <h3>
             Our aim is for these leaders toinspire others that business can bea
@@ -392,6 +410,7 @@ function App() {
           </h3>
           <p>says Mr Turner</p>
         </Pullquote>
+        <AnimationTrigger>
         <p>
           He points out that the British Government has already set out
           ambitious climate goals for 2050. “So far, we’re not doing
@@ -406,6 +425,7 @@ function App() {
           today understand as sustainability – these will become everyday issues
           of corporate life.”
         </p>
+        </AnimationTrigger>
       </Pagebody>
       <CTA>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volut pat.</p>

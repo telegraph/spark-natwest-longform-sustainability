@@ -7,6 +7,7 @@
   padding: 125px 20px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 
   &.pagebody--notitle {
     margin: 0 auto;
@@ -15,7 +16,7 @@
   .pagebody__content {
     opacity: 0;
     transform: translateY(20px);
-    transition: 2s;
+    transition: 1s;
     display: flex;
     flex-flow: column;
   }
@@ -35,6 +36,10 @@
 
   h3 {
     margin: 40px auto;
+  }
+  p::selection {
+    background: #42145F;
+    color: white;
   }
 }
 

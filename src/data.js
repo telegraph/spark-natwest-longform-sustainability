@@ -178,64 +178,64 @@ export const verticalSlider = [
     stat: '$19.9bn (£15.08bn)',
     copy:
       'The amount spent by Fortune 500 companies on corporate social responsibility, according to Unesco',
-    coordTop: '1',
+    coordTop: '6',
     coordRight: '60',
   },
   {
     stat: '200%',
     copy:
       'The number of companies investing in sustainability has doubled since 2010, according to Foundations of Sustainable Business, by John D Wood and Nada R Sanders',
-    coordTop: '7',
+    coordTop: '12',
     coordRight: '15',
   },
   {
     stat: '4% to 6%',
     copy:
       'The amount by which effective corporate social responsibility (CSR) can increase a company’s market valuation, according to a 2015 study',
-    coordTop: '16',
+    coordTop: '21',
     coordRight: '42',
   },
   {
     stat: '25%',
     copy:
       'A quarter of a company’s market value is its reputation, according to the World Economic Forum',
-    coordTop: '27',
+    coordTop: '32',
     coordRight: '20',
   },
   {
     stat: '64%',
     copy:
       'Two-thirds of chief executives think that CSR is core to their business, according to PwC research',
-    coordTop: '38',
+    coordTop: '43',
     coordRight: '65',
   },
   {
     stat: '57.5%',
     copy:
       'More than half of midsized businesses in Britain say that sustainability is “extremely” or “very” influential in their decision making, according to NatWest research',
-    coordTop: '49',
+    coordTop: '54',
     coordRight: '30',
   },
   {
     stat: '82%',
     copy:
       'The number of business decision makers who invested in ethical sourcing because it is “the right thing to do”, according to Gartner',
-    coordTop: '60',
+    coordTop: '65',
     coordRight: '54',
   },
   {
     stat: '230',
     copy:
       'The number of the world’s top 250 companies that produce an annual CSR report, according to KPMG',
-    coordTop: '71',
+    coordTop: '76',
     coordRight: '10',
   },
   {
     stat: '62.4%',
     copy:
       'Almost two-thirds of midsized businesses have invested in new technologies for energy efficiency, according to NatWest research',
-    coordTop: '77',
-    coordRight: '62',
+    coordTop: '82',
+    coordRight: '75',
   },
 ];
 

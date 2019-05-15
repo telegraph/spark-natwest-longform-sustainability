@@ -1,19 +1,18 @@
 .slider {
   position: relative;
   margin: 50px 0;
+  opacity: 1;
 
   .slider__title {
+    position: absolute;
     font-family: "RN House Sans", arial, sans-serif;
     font-weight: bold;
     font-size: 50px;
     line-height: 50px;
-    color: #fff;
+    color: #401663;
     text-align: center;
     max-width: 100%;
     margin: 3% 0 0;
-    position: absolute;
-    color: #401663;
-    font-size: 50px;
     width: 100%;
   }
 
@@ -28,9 +27,9 @@
   .slider__container {
     position: absolute;
     min-width: 33%;
-    min-height: 150px;
+    min-height: 110px;
     background: #401663;
-    top: 20%;
+    top: 26%;
     right: 50%;
     transform: translateX(50%);
     border-radius: 10px;
@@ -40,9 +39,10 @@
       position: absolute;
       opacity: 0;
       color: #fff;
-      padding: 10% 10%;
+      padding: 7% 10%;
       transition: opacity 0.3s, transform 0.4s;
       transform: translateX(-100%);
+      text-align: center;
 
       &.visible {
         opacity: 1;
@@ -53,6 +53,7 @@
 
   .slider__progress {
     width: 60%;
+    max-width: 940px;
     margin: 0 auto;
 
     .progress-points {
@@ -108,8 +109,22 @@
   background: red;
 }
 
+@media (min-width: 730px) {
+  .slider {
+    .slider__container {
+      min-width: 500px;
+    }
+  }
+}
+
 @media (max-width: 730px) {
   .slider {
+
+    .slider__title {
+      font-size: 35px;
+      line-height: 37px;
+      margin-top: 30px;
+    }
     .slider__container {
       min-width: 85%;
       min-height: 140px;

@@ -12,12 +12,32 @@ function VerticalSlider() {
   const [scrolled, setScrolled] = useState(0);
   const [conDimensions, setContainerDimensions] = useState(0);
   const bubbleSlider = useRef(null);
+  const [fixed, updateFixed] = useState(false);
+
+  const bubbleTitle = useRef(null);
+
+  const handleScroll = () => {
+    window.requestAnimationFrame(() => {
+      const timeLineBB = bubbleSlider.current.getBoundingClientRect();
+      const timeLineTitleBB = bubbleTitle.current.getBoundingClientRect();
+
+      if ((timeLineTitleBB.top < 110 && !fixed) && (timeLineBB.bottom - window.innerHeight > 0)) {
+        updateFixed(true);
+        console.log('setting fixed');
+      } else if ((timeLineBB.bottom - window.innerHeight < 0 && fixed) || timeLineBB.top > 110) {
+        console.log(timeLineBB);
+        updateFixed(false);
+        console.log('not fixed');
+      }
+    });
+  };
 
   const grabData = () => {
     setData(verticalSlider);
   };
 
   const amountScrolledandHeight = () => {
+    handleScroll();
     // get amount of slider scrolled
     const value = bubbleSlider.current.getBoundingClientRect().top - window.innerHeight;
     setScrolled(-value);
@@ -43,7 +63,7 @@ function VerticalSlider() {
 
   return (
     <div className="vertical-slider" ref={bubbleSlider}>
-      <h2 className="vertical-slider__title">Sustainability in numbers</h2>
+      <h2 className={`vertical-slider__title ${fixed ? 'fixed' : ''}`} ref={bubbleTitle}>Sustainability in numbers</h2>
       <div id="parallax-container">
         <BackgroundBubble pos={{ top: '10%', left: '1vw' }} speed={200} conDimen={conDimensions} />
         <BackgroundBubble pos={{ top: '30%', left: '20vw' }} speed={80} conDimen={conDimensions} />
@@ -55,7 +75,7 @@ function VerticalSlider() {
         <BackgroundBubble pos={{ top: '90%', left: '45vw' }} speed={100} conDimen={conDimensions} />
       </div>
       <div className="vertical-slider__container">
-        {data.map((item, i) => {
+        {data.map((item) => {
           return (
             <Bubble right={item.coordRight} top={item.coordTop} title={item.stat} copy={item.copy} scrolled={scrolled} conDimen={conDimensions} />
           );

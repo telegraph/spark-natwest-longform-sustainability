@@ -3,16 +3,16 @@
   overflow: hidden;
   position: relative;
 
-  // .scrollGallery__title:before {
-  //   content: '';
-  //   background: linear-gradient(to bottom, #43305c 0%, rgba(67, 48, 92, 0.85) 84%, rgba(67, 48, 92, 0) 100%);
-  //   height: 300%;
-  //   width: 100%;
-  //   bottom: -33px;
-  //   position: absolute;
-  //   right: 0;
-  //   z-index: -1;
-  // }
+  .scrollGallery__title:before {
+    content: '';
+    background: linear-gradient(to bottom, #43305c 0%, rgb(67, 48, 92) 81%, rgba(67, 48, 92, 0) 100%);
+    height: 300%;
+    width: 100vw;
+    bottom: -93px;
+    position: absolute;
+    right: -62%;
+    z-index: -1;
+   }
 
   .scrollGallery__title {
     font-family: "RN House Sans", arial, sans-serif;
