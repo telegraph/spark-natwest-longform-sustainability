@@ -7,13 +7,6 @@
   position: relative;
   min-height: 600px;
   transition: all 0.6s;
-  opacity: 0;
-  transform: translateY(10%);
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0%);
-  }
 
   .basic-slider__title {
     font-family: "RN House Sans", arial, sans-serif;

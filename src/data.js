@@ -244,7 +244,7 @@ export const basicSlider = [
     img: bidfood,
     logo: bidfoodLogo,
     copy:
-      'Food wholesaler Bidfood launched its ‘Plate 2 Planet’ initiative with Fairtrade Foundation and Fairshare to help pubs and restaurants focus on sustainability in the food business. Bidfood says that 18-20 million tonnes of food is wasted each year in the UK, and half this waste occurs in the food industry. The company also donates meals to charities at all its sites. Heather Angus, HR & Sustainability Director at Bidfood said, ‘Collaboration is the vital ingredient to success in sustainability. Working amongst like-minded businesses to support the industry in making positive change will help any business in achieving its sustainability goals.’',
+      'Food wholesaler Bidfood launched its ‘Plate 2 Planet’ initiative with Fairtrade Foundation and Fairshare to help pubs and restaurants focus on sustainability in the food business. Bidfood says that 18-20 million tonnes of food is wasted each year in the UK, and half this waste occurs in the food industry. The company also donates meals to charities at all its sites.<br /> Heather Angus, HR & Sustainability Director at Bidfood said, ‘Collaboration is the vital ingredient to success in sustainability. Working amongst like-minded businesses to support the industry in making positive change will help any business in achieving its sustainability goals.’',
   },
   {
     img: interfacePhoto,
@@ -256,25 +256,25 @@ export const basicSlider = [
     img: menu,
     logo: menuLogo,
     copy:
-      'Grooming brand men-ü aims to reduce the huge amount of plastic used in men’s shaving products by selling refill packs, and selling products in a more concentrated form in smaller bottles. The company says that these initiatives can reduce the amount of packaging by 90pc. Founder Graham Fish says: “As packaging became more of an issue, we realised that if we launched refill packs not only would these be cheaper but also facilitate reuse and recycling. We have ultra-concentrate products that not only provide better performance but also up to 90pc less packaging than other grooming products.”',
+      'Grooming brand men-ü aims to reduce the huge amount of plastic used in men’s shaving products by selling refill packs, and selling products in a more concentrated form in smaller bottles. The company says that these initiatives can reduce the amount of packaging by 90pc.<br /><br /> Founder Graham Fish says: “As packaging became more of an issue, we realised that if we launched refill packs not only would these be cheaper but also facilitate reuse and recycling. We have ultra-concentrate products that not only provide better performance but also up to 90pc less packaging than other grooming products.”',
   },
   {
     img: mercato,
     logo: mercatoLogo,
     copy:
-      'The Mercato Metropolitano food market in south London constantly experiments with new ways to be more sustainable, from eliminating single-use plastic to growing shiitake mushrooms using old coffee grounds. Stalls at the market grow vegetables and herbs on site using hydroponics and aquaponics. Andrea Rasca, founder of Metropolitano, says: “Sustainability comes first in everything we do. So many consumers want to minimise their impact on the environment, but businesses are failing to offer them options that don’t compromise on price and quality – especially in the food space, where supermarkets and high-street chains have dominated for too long.”',
+      'The Mercato Metropolitano food market in south London constantly experiments with new ways to be more sustainable, from eliminating single-use plastic to growing shiitake mushrooms using old coffee grounds. Stalls at the market grow vegetables and herbs on site using hydroponics and aquaponics.<br /><br /> Andrea Rasca, founder of Metropolitano, says: “Sustainability comes first in everything we do. So many consumers want to minimise their impact on the environment, but businesses are failing to offer them options that don’t compromise on price and quality – especially in the food space, where supermarkets and high-street chains have dominated for too long.”',
   },
   {
     img: lightfoot,
     logo: lightfootLogo,
     copy:
-      'LIghtfoot is an in-vehicle gadget described as a “Fitbit for cars”, which helps drivers find their engine’s sweet spot. It reduces fuel use by 20pc, and last year alone the business helped users save £3.4bn in fuel costs and 3,666 tonnes of emissions. Founder and chief executive Mark Roberts says: “I believe what we are seeing is a cultural shift in the way we view our use of resources and place in the ecosystem. People are more aware than ever that our behaviour and habits need addressing if we want to prevent climate breakdown.”',
+      'LIghtfoot is an in-vehicle gadget described as a “Fitbit for cars”, which helps drivers find their engine’s sweet spot. It reduces fuel use by 20pc, and last year alone the business helped users save £3.4bn in fuel costs and 3,666 tonnes of emissions.<br /><br /> Founder and chief executive Mark Roberts says: “I believe what we are seeing is a cultural shift in the way we view our use of resources and place in the ecosystem. People are more aware than ever that our behaviour and habits need addressing if we want to prevent climate breakdown.”',
   },
   {
     img: blackSheep,
     logo: blackSheepLogo,
     copy:
-      'Every year, 2.5 billion coffee cups are thrown away in the UK. While many plastic coffee cups are recyclable, only one in 400 plastic cups is recycled. Black Sheep Coffee uses 100pc vegware packaging, made from vegetable by-products, which is fully compostable. Founders Gabriel Shohet and Eirik Holth also support local homeless people. Mr Shohet says: “Our staff survey results speak for themselves: the primary reason for people joining Black Sheep isn’t pay but the values that our company stands for. “We think that the idea of offering a discount for bringing your own cup is absurd. Why offer plastic cups in the first place?”',
+      'Every year, 2.5 billion coffee cups are thrown away in the UK. While many plastic coffee cups are recyclable, only one in 400 plastic cups is recycled. Black Sheep Coffee uses 100pc vegware packaging, made from vegetable by-products, which is fully compostable.<br /><br /> Founders Gabriel Shohet and Eirik Holth also support local homeless people. Mr Shohet says: “Our staff survey results speak for themselves: the primary reason for people joining Black Sheep isn’t pay but the values that our company stands for. “We think that the idea of offering a discount for bringing your own cup is absurd. Why offer plastic cups in the first place?”',
   },
 ];
 

@@ -6,6 +6,7 @@ import './style.scss';
 
 function Timeline(props) {
   const [fixed, updateFixed] = useState(false);
+  const [titleFade, triggerTitleFade] = useState(false);
 
   const timeLine = useRef(null);
   const timelineTitle = useRef(null);
@@ -17,11 +18,18 @@ function Timeline(props) {
 
       if ((timeLineTitleBB.top < 110 && !fixed) && (timeLineBB.bottom - window.innerHeight > 0)) {
         updateFixed(true);
+        triggerTitleFade(false);
         console.log('setting fixed');
-      } else if ((timeLineBB.bottom - window.innerHeight < 0 && fixed) || timeLineBB.top > 110) {
-        console.log(timeLineBB);
+      } else if ((timeLineBB.bottom < 0 && fixed) || timeLineBB.top > 110) {
         updateFixed(false);
+        triggerTitleFade(false);
         console.log('not fixed');
+      } else if (timeLineBB.bottom < (window.innerHeight / 2)) {
+        triggerTitleFade(true);
+        setTimeout(() => {
+          updateFixed(false);
+          console.log('not fixed');
+        }, 300);
       }
     });
   };
@@ -58,12 +66,12 @@ function Timeline(props) {
         <BackgroundBubble pos={{ top: '80%', left: '40vw' }} />
         <BackgroundBubble pos={{ top: '85%', left: '20vw' }} />
       </div>
-      <h3 className={`scrollGallery__title ${fixed ? 'fixed' : ''}`} ref={timelineTitle}>
+      <h3 className={`scrollGallery__title ${fixed ? 'fixed' : ''} ${titleFade ? 'fade' : ''}`} ref={timelineTitle}>
         {props.title}
       </h3>
-      {props.items.map((item) => {
+      {props.items.map((item, i) => {
         return (
-          <div className={`slides`}>
+          <div className={`slides`} key={`slide-${i + 1}`}>
             <div className="text-box">
             <img className="image" src={item.img} />
               <h4>

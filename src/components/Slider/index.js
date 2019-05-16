@@ -77,6 +77,7 @@ function Slider() {
                   currentItem === i ? 'active' : ''
                 }`}
                 onClick={(e) => changeItem(i, e)}
+                key={`office-slider${i + 1}`}
               />
             );
           })}

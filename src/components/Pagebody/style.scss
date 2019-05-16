@@ -25,6 +25,11 @@
     font-size: 15px;
     margin-bottom: 15px;
 
+    &.footnote {
+      color: #00B6BE;
+      margin-top: 10vh;
+    }
+
     &:first-child {
       margin-top: 0;
     }
@@ -55,26 +60,6 @@
 @media (max-width: 970px) {
   .pagebody {
     flex-flow: column;
-    .title {
-      max-width: 540px;
-      margin: 0 auto 40px auto;
-
-      .title__content {
-        display: inline-block;
-        text-align: left;
-        max-width: 390px;
-      }
-
-      img {
-        display: inline-block;
-        margin: 0;
-      }
-
-    }
-    .pagebody__content {
-      margin: 0 auto;
-    }
-
   }
 }
 

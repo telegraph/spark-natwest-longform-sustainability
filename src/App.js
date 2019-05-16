@@ -411,20 +411,23 @@ function App() {
           <p>says Mr Turner</p>
         </Pullquote>
         <AnimationTrigger>
-        <p>
-          He points out that the British Government has already set out
-          ambitious climate goals for 2050. “So far, we’re not doing
-          fantastically well on keeping to these goals, but at least we have
-          something written in law.
-        </p>
-        <p>
-          “The idea of sustainability is really becoming mainstream. As a pillar
-          of society, business will increasingly be involved. We’ll see
-          sustainability switch to an ‘everything agenda’, dealing with
-          everything from environmental issues to inequality. The issues that we
-          today understand as sustainability – these will become everyday issues
-          of corporate life.”
-        </p>
+          <p>
+            He points out that the British Government has already set out
+            ambitious climate goals for 2050. “So far, we’re not doing
+            fantastically well on keeping to these goals, but at least we have
+            something written in law.
+          </p>
+          <p>
+            “The idea of sustainability is really becoming mainstream. As a pillar
+            of society, business will increasingly be involved. We’ll see
+            sustainability switch to an ‘everything agenda’, dealing with
+            everything from environmental issues to inequality. The issues that we
+            today understand as sustainability – these will become everyday issues
+            of corporate life.”
+          </p>
+          <p className="footnote">
+            *Based on interviews in 2018 with 861 midsized businesses, with turnovers of £5m to £250m
+          </p>
         </AnimationTrigger>
       </Pagebody>
       <CTA>

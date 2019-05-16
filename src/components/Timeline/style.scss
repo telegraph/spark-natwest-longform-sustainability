@@ -29,6 +29,12 @@
     color: white;
     transform: translateX(50%);
     z-index: 6;
+    transition: opacity 0.4s;
+  
+    &.fade {
+      opacity: 0;
+    }
+
   }
 
   .fixed {
@@ -115,6 +121,11 @@
       }
     }
     
+    .scrollGallery__title:before {
+      height: 210px;
+      width: 400%;
+    }
+
     .scrollGallery__title {
       font-size: 24px;
       line-height: 24px;

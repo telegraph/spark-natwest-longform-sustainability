@@ -22,8 +22,8 @@ function Hero(props) {
         </p>
       </div>
       <div className={`hero__art ${loaded ? 'visible-art' : ''}`}>
-        <img class="art-desktop" src={props.img} alt="Hero" />
-        <img class="art-mobile" src={props.imgMobile} alt="Hero" />
+        <img className="art-desktop" src={props.img} alt="Hero" />
+        <img className="art-mobile" src={props.imgMobile} alt="Hero" />
       </div>
       <ReadMore content="Scroll to read on" />
     </div>

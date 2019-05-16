@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-
-import makeVisible from '../../hooks/makeVisible';
+import React, { useState, useEffect } from 'react';
 
 import Slide from './subcomponents/Slide';
 
@@ -12,7 +10,6 @@ function BasicSlider() {
   const [currentSlide, changeCurrentSlide] = useState(0);
   const [data, setData] = useState([]);
   const [currentSlideHeight, setCurrentSlideHeight] = useState(0);
-  const [bodyContent, isVisible] = makeVisible();
 
   const grabData = () => {
     setData(basicSlider);
@@ -36,7 +33,7 @@ function BasicSlider() {
   };
 
   return (
-    <div className={`basic-slider ${isVisible ? 'visible' : ''}`} ref={bodyContent}>
+    <div className="basic-slider">
       <h2 className="basic-slider__title">
         Seven sustainable businesses setting the trend
       </h2>
@@ -47,11 +44,11 @@ function BasicSlider() {
             onClick={() => prevSlide()}
           />
           <div className="total">
-            {`${currentSlide + 1} of ${data.length - 1}`}
+            {`${currentSlide + 1} of ${data.length}`}
           </div>
           <div
             className={`arrow right-arrow ${
-              currentSlide >= data.length - 1 ? 'noclick' : ''
+              currentSlide >= data.length -1 ? 'noclick' : ''
             }`}
             onClick={() => nextSlide()}
           />

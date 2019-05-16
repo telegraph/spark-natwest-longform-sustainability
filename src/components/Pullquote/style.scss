@@ -1,7 +1,8 @@
 .pullquote {
   position: relative;
   padding: 40px 0;
-  margin: 40px 0;
+  margin: 40px auto;
+  max-width: 540px;
   opacity: 0;
   transform: translateY(20px);
   transition: 1s;

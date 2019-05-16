@@ -15,11 +15,11 @@ export default function Slide(props) {
       className={`basic-slider__item ${
         props.currentSlide === props.i ? 'visible' : ''
         }`}>
-      <div class="img-container">
+      <div className="img-container">
         <img className="img-photo" src={props.img} />
         <img className="img-logo" src={props.logo} />
       </div>
-      <p>{props.copy}</p>
+      <p dangerouslySetInnerHTML={{__html: props.copy}} />
     </div>
   )
 }

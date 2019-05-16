@@ -2,11 +2,13 @@
   position: relative;
   height: 100vh;
   width: 100%;
+  padding: 0 25px;
   background-color: #43305C;
   background-position: 50%;
   background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
 
   .hero__content {
@@ -94,6 +96,10 @@
   }
 }
 
+@media (max-width: 1200px) {
+
+}
+
 @media (max-width: 970px) {
   .hero {
     flex-flow: column;
@@ -104,6 +110,10 @@
       margin: 0 auto;
       .art-desktop {
         max-height: 300px;
+        display: none;
+      }
+      .art-mobile {
+        display: block;
       }
     }
   }
@@ -133,10 +143,6 @@
     .art-mobile {
       display: block;
     }
-  }
-
-  .art-desktop {
-    display: none;
   }
   }
 }

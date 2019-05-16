@@ -13,6 +13,7 @@ function VerticalSlider() {
   const [conDimensions, setContainerDimensions] = useState(0);
   const bubbleSlider = useRef(null);
   const [fixed, updateFixed] = useState(false);
+  const [titleFade, triggerTitleFade] = useState(false);
 
   const bubbleTitle = useRef(null);
 
@@ -23,11 +24,18 @@ function VerticalSlider() {
 
       if ((timeLineTitleBB.top < 110 && !fixed) && (timeLineBB.bottom - window.innerHeight > 0)) {
         updateFixed(true);
+        triggerTitleFade(false);
         console.log('setting fixed');
-      } else if ((timeLineBB.bottom - window.innerHeight < 0 && fixed) || timeLineBB.top > 110) {
-        console.log(timeLineBB);
+      } else if ((timeLineBB.bottom < 0 && fixed) || timeLineBB.top > 110) {
         updateFixed(false);
+        triggerTitleFade(false);
         console.log('not fixed');
+      } else if (timeLineBB.bottom < (window.innerHeight / 2)) {
+        triggerTitleFade(true);
+        setTimeout(() => {
+          updateFixed(false);
+          console.log('not fixed');
+        }, 300);
       }
     });
   };
@@ -63,7 +71,7 @@ function VerticalSlider() {
 
   return (
     <div className="vertical-slider" ref={bubbleSlider}>
-      <h2 className={`vertical-slider__title ${fixed ? 'fixed' : ''}`} ref={bubbleTitle}>Sustainability in numbers</h2>
+      <h2 className={`vertical-slider__title ${fixed ? 'fixed' : ''} ${titleFade ? 'fade' : ''}`} ref={bubbleTitle}>Sustainability in numbers</h2>
       <div id="parallax-container">
         <BackgroundBubble pos={{ top: '10%', left: '1vw' }} speed={200} conDimen={conDimensions} />
         <BackgroundBubble pos={{ top: '30%', left: '20vw' }} speed={80} conDimen={conDimensions} />

@@ -3,6 +3,7 @@
   transform: translateX(-40%);
   flex-basis: 35%;
   margin: 0;
+  padding: 0 25px;
   margin-right: 65px;
   
   h2 {
@@ -24,13 +25,37 @@
 
 }
 
+@media (min-width: 730px) and (max-width: 970px) {
+  .title {
+    max-width: 540px;
+    margin: 0 auto 40px auto;
+
+    .title__content {
+      display: inline-block;
+      text-align: left;
+      max-width: 390px;
+    }
+
+    img {
+      display: inline-block;
+      margin: 0;
+      height: 70px;
+    }
+
+  }
+  .pagebody__content {
+    margin: 0 auto;
+  }
+
+}
+
 
 @media (max-width: 730px) {
   .title {
     display: flex;
-    margin-right: 0;
-    margin-bottom: 50px;
+    margin: auto auto 50px auto;
     align-items: flex-start;
+    max-width: 540px;
 
     h2 {
       text-align: left;
@@ -46,6 +71,10 @@
 
 @media (max-width: 475px) {
   .title {
+
+    img {
+      height: 70px;
+    }
     
     h2 {
       font-size: 25px;
