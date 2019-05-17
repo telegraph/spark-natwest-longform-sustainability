@@ -13,17 +13,17 @@ const Credits = () => (
 
         <div className="credit-listing">
           <strong>Words</strong>
-          <span className="credit-name">Gavin Haines</span>
+          <span className="credit-name">Rob Waugh</span>
           <strong>Commissioning Editor</strong>
-          <span className="credit-name">George Clode</span>
+          <span className="credit-name">Rachael Adams</span>
         </div>
 
         <div className="credit-listing">
           <strong>Sub-editor</strong>
-          <span className="credit-name">Viv Watts</span>
+          <span className="credit-name">Richard Dixon</span>
 
           <strong>Lead Designer</strong>
-          <span className="credit-name">Matt Brant</span>
+          <span className="credit-name">Betty Guerra</span>
         </div>
 
         <div className="credit-listing">
@@ -31,12 +31,12 @@ const Credits = () => (
           <span className="credit-name">Alex Hooper</span>
 
           <strong>Picture Editor</strong>
-          <span className="credit-name">Alex Kelly</span>
+          <span className="credit-name">Alice Griffiths</span>
         </div>
 
         <div className="credit-listing">
           <strong>Project Manager</strong>
-          <span className="credit-name">Harrie Dumenil</span>
+          <span className="credit-name">Ellie Evans</span>
         </div>
 
       </div>

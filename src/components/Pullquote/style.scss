@@ -20,6 +20,12 @@
     color: #6F2C91;
     text-align: left;
     margin: 0;
+
+    &::selection {
+      background: #42145F;
+      color: white;
+    }
+
   }
 
   p {
@@ -54,7 +60,7 @@ background: #00B6BE;
     position: absolute;
     top: 0;
     background-image: url(../../assets/quote.svg);
-    width: 46px;
+    width: 47px;
     height: 40px;
   }
 
@@ -88,8 +94,8 @@ background: #00B6BE;
     background-image: url(../../assets/quote.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 66px;
-    height: 57px;
+    width: 67px;
+    height: 58px;
     right: 50%;
     top: 0;
     transform: translateX(50%);

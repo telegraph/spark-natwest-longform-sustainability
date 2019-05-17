@@ -10,6 +10,7 @@ function Slider() {
   const [items, setItems] = useState([]);
   const [currentItem, changeCurrentItem] = useState(0);
   const [itemProgress, changeItemProgress] = useState(0);
+  const [inputProgress, changeInputProgress] = useState(0);
 
   const points = useRef(null);
 
@@ -31,6 +32,11 @@ function Slider() {
     // On currentItem update
     calcItemProgress();
   }, [currentItem]);
+  
+
+  function handleThis(e) {
+    changeCurrentItem(parseInt(e.target.value, 10));
+  }
 
   function changeItem(index) {
     changeCurrentItem(index);
@@ -83,6 +89,8 @@ function Slider() {
           })}
         </div>
         <div className="progress-line">
+        <input type="range"
+          min="0" max="16" onChange={handleThis} value={currentItem} step="1"></input>
           <div className="line-marker" style={{ left: `${itemProgress}%` }}>
             <img src={officeSliderCube} />
           </div>

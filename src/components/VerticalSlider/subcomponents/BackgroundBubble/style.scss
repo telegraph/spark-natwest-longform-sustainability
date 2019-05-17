@@ -6,13 +6,17 @@
   margin: 0px;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 0;
+
+  &.bring-to-front {
+    z-index: 3;
+  }
 
   .box {
     position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #516CB3;
+    background-color: rgba(81, 108, 179, 0.43);
   }
 }

@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 
   .hero__content {
     margin: 11% 0 auto auto;
@@ -100,7 +101,7 @@
 
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1200px) {
   .hero {
     flex-flow: column;
     .hero__content {
@@ -121,6 +122,7 @@
 
 @media (max-width: 730px) {
   .hero {
+    justify-content: flex-start;
     padding: 12% 20px;
     align-items: center;
     h1 {
@@ -134,7 +136,7 @@
     }
 
   .hero__content {
-    margin: 11% 0 0 auto;
+    margin: 20px 0 0 auto;
   }
   
   .hero__art {
@@ -144,5 +146,10 @@
       display: block;
     }
   }
+
+  .read-more {
+    bottom: 50px;
+  }
+
   }
 }

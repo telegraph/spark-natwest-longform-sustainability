@@ -9,13 +9,13 @@ import './style.scss';
 function Socials() {
   return (
     <div className="socials">
-      <a className="addthis_button_facebook">
+      <a className="addthis_button_facebook" href="#">
         <img src={fbImg} />
       </a>
-      <a className="addthis_button_twitter">
+      <a className="addthis_button_twitter" href="#">
         <img src={twitterImg} />
       </a>
-      <a className="addthis_button_mailto" target="_blank">
+      <a className="addthis_button_mailto" href="#">
         <img src={mailImg} />
       </a>
     </div>

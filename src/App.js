@@ -7,7 +7,6 @@ import { trendsImpacting } from "./data";
 import Loader from "./components/Loader";
 import Header from "./components/Header";
 import Share from "./components/Share";
-import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Pagebody from "./components/Pagebody";
 import Dropcap from "./components/Dropcap";
@@ -61,7 +60,6 @@ function App() {
   return (
     <>
       <Header progress={progress} />
-      <Nav />
       <Hero img={heroImg} imgMobile={heroImgMobile}>
         <div className="hero__content">
           <h1>The future of sustainability</h1>
@@ -75,15 +73,14 @@ function App() {
         <Pullquote specialQuote>
           <h3>If we damage the natural world, we damage ourselves</h3>
           <p>
-            Sir David Attenborough said in his interview with Prince William at
-            the World Economic Forum at Davos in January
+          Sir David Attenborough during an interview with Prince William at the World Economic Forum at Davos in January
           </p>
         </Pullquote>
       </PullQuoteSpecial>
       <Pagebody>
         <p>
           <Dropcap>T</Dropcap>
-          hanks to television shows such as Sir David’s Blue Planet II, public
+          hanks to television shows such as Sir David’s <em>Blue Planet II</em>, public
           awareness of issues like sustainability has never been higher.
         </p>
         <p>
@@ -111,10 +108,10 @@ function App() {
         <p>
           The mindset of companies has shifted since the emergence of corporate
           social responsibility (CSR) programmes, says Rob Cameron, of
-          SustainAbility, a business consultancy.“
+          SustainAbility, a business consultancy.
         </p>
         <p>
-          Business thinking about its role in society is not new,” says Mr
+        “Business thinking about its role in society is not new,” says Mr
           Cameron. “We might not have approved of the paternalistic approach of
           Cadbury’s in the Victorian era, but it took a broad view of its
           responsibilities, for instance housing workers.”
@@ -129,7 +126,7 @@ function App() {
             More than 90% of the world’s top 250 companies now produce an annual
             report on CSR
           </h3>
-          <p>according to consultants KPMG</p>
+          <p>according to KPMG</p>
         </Pullquote>
         <AnimationTrigger>
           <p>
@@ -182,7 +179,7 @@ function App() {
             of the general population agreeing that business leaders should take
             a lead on these issues
           </h3>
-          <p>says Dr Robey</p>
+          <p>says James Robey, global head of sustainability, Capgemini</p>
         </Pullquote>
         <AnimationTrigger>
           <p>
@@ -215,7 +212,7 @@ function App() {
             What is the purpose of our business, beyond the pursuit of profit? A
             cultural shift is taking place in boardrooms
           </h3>
-          <p>says Mr Cameron</p>
+          <p>says Rob Cameron, SustainAbility</p>
         </Pullquote>
       </Pagebody>
       <VerticalSlider />
@@ -276,7 +273,7 @@ function App() {
             becoming ever more important, with
           </p>
           <h3>
-            73.5% agreeing that sustainability is important, according to
+            73.5% agree that sustainability is important, according to
             NatWest research
           </h3>
         </Pullquote>
@@ -431,8 +428,8 @@ function App() {
         </AnimationTrigger>
       </Pagebody>
       <CTA>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volut pat.</p>
-        <Button />
+        <p>For more information visit the NatWest Rethinking Business Hub</p>
+        <Button link="https://natwestbusinesshub.com/content/rethinkingbusiness" />
       </CTA>
       <Socials />
       <Broughttyb />

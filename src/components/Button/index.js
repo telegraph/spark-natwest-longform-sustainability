@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.scss';
 
-const Button = () => (
+const Button = (props) => (
   <div className="button">
-    <a href="#">Find out more</a>
+    <a href={`${props.link}`} target="_blank">Find out more</a>
   </div>
 );
 export default Button;

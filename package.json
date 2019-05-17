@@ -2,6 +2,7 @@
   "name": "natwest-longfom-sustainability",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/content/dam/spark/component-assets/custom/2019/natwest/sustainability/",
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.8.6",

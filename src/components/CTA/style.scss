@@ -8,6 +8,7 @@
   .cta__inner {
     display: flex;
     align-items: center;
+    padding: 0 25px;
   }
 
   p {
@@ -16,7 +17,7 @@
     max-width: 560px;
     font-size: 30px;
     line-height: 30px;
-    margin-right: 60px;
+    margin: 0 auto;
   }
 
 }
@@ -28,7 +29,7 @@
     .cta__inner {
       flex-flow: column;
       align-items: flex-start;
-      margin-left: 25px;
+      margin: 40px 0;
       p{ 
         font-size: 20px;
         line-height: 20px;
@@ -36,6 +37,7 @@
       .button {
         padding-left: 0;
         padding-top: 0;
+        margin-top: 30px;
         a {
           font-size: 19px;
           padding: 12px 14px;
