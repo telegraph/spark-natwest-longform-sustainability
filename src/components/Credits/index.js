@@ -7,36 +7,36 @@ const Credits = () => (
     <div className="content-width">
       <div className="credits">
         <div className="credit-listing">
-          <strong>Produced by</strong>
-          <span className="credit-name">Telegraph Spark</span>
+          Produced by
+          <span className="credit-name"><strong>Telegraph Spark</strong></span>
         </div>
 
         <div className="credit-listing">
-          <strong>Words</strong>
-          <span className="credit-name">Rob Waugh</span>
-          <strong>Commissioning Editor</strong>
-          <span className="credit-name">Rachael Adams</span>
+          Words
+          <span className="credit-name"><strong>Rob Waugh</strong></span>
+          Commissioning Editor
+          <span className="credit-name"><strong>Rachael Adams</strong></span>
         </div>
 
         <div className="credit-listing">
-          <strong>Sub-editor</strong>
-          <span className="credit-name">Richard Dixon</span>
+          Sub-editor
+          <span className="credit-name"><strong>Richard Dixon</strong></span>
 
-          <strong>Lead Designer</strong>
-          <span className="credit-name">Betty Guerra</span>
+          Lead Designer
+          <span className="credit-name"><strong>Betty Guerra</strong></span>
         </div>
 
         <div className="credit-listing">
-          <strong>Digital Developer</strong>
-          <span className="credit-name">Alex Hooper</span>
+          Digital Developer
+          <span className="credit-name"><strong>Alex Hooper</strong></span>
 
-          <strong>Picture Editor</strong>
-          <span className="credit-name">Alice Griffiths</span>
+          Picture Editor
+          <span className="credit-name"><strong>Alice Griffiths</strong></span>
         </div>
 
         <div className="credit-listing">
-          <strong>Project Manager</strong>
-          <span className="credit-name">Ellie Evans</span>
+          Project Manager
+          <span className="credit-name"><strong>Ellie Evans</strong></span>
         </div>
 
       </div>

@@ -6,7 +6,7 @@ import './style.scss';
 
 import { basicSlider } from '../../data';
 
-function BasicSlider() {
+export default function BasicSlider() {
   const [currentSlide, changeCurrentSlide] = useState(0);
   const [data, setData] = useState([]);
   const [currentSlideHeight, setCurrentSlideHeight] = useState(0);
@@ -62,5 +62,3 @@ function BasicSlider() {
     </div>
   );
 }
-
-export default BasicSlider;

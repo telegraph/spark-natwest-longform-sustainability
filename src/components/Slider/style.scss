@@ -9,6 +9,7 @@
     width: 100%;
     opacity: 0;
     z-index: 999;
+    cursor: pointer;
   }
 
   input[type=range]::-webkit-slider-thumb {
@@ -116,7 +117,7 @@
       .line-marker {
         position: absolute;
         top: -7px;
-        transition: left 0.4s;
+        transition: left 0.01s;
 
         img {
           position: absolute;

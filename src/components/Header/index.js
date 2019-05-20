@@ -22,7 +22,7 @@ const Header = (props) => (
 
       <div className="btyb-wrapper">
         <span className="btyb">Brought to you by</span>
-        <a rel="nofollow" href="https://flights.etihad.com/en/dct-abudhabi-uk" target="_blank">
+        <a rel="nofollow" href="https://business.natwest.com/business.html" target="_blank">
           <img className="btyb-btn primary" src={NatwestLogo} />
         </a>
       </div>

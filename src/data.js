@@ -244,7 +244,7 @@ export const basicSlider = [
     img: bidfood,
     logo: bidfoodLogo,
     copy:
-      'Food wholesaler Bidfood launched its ‘Plate 2 Planet’ initiative with Fairtrade Foundation and Fairshare to help pubs and restaurants focus on sustainability in the food business. Bidfood says that 18-20 million tonnes of food is wasted each year in the UK, and half this waste occurs in the food industry. The company also donates meals to charities at all its sites.<br /> Heather Angus, HR & Sustainability Director at Bidfood said, ‘Collaboration is the vital ingredient to success in sustainability. Working amongst like-minded businesses to support the industry in making positive change will help any business in achieving its sustainability goals.’',
+      'Food wholesaler Bidfood launched its ‘Plate 2 Planet’ initiative with Fairtrade Foundation and Fairshare to help pubs and restaurants focus on sustainability in the food business. Bidfood says that 18-20 million tonnes of food is wasted each year in the UK, and half this waste occurs in the food industry. The company also donates meals to charities at all its sites.<br /><br /> Heather Angus, HR & Sustainability Director at Bidfood said, "Collaboration is the vital ingredient to success in sustainability. Working amongst like-minded businesses to support the industry in making positive change will help any business in achieving its sustainability goals."',
   },
   {
     img: interfacePhoto,

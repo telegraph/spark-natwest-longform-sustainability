@@ -35,7 +35,7 @@
     padding-bottom: 50px;
     justify-content: center;
     transition: all 0.8s;
-    transform: translateY(100%);
+    transform: translateX(100%);
     p {
       color: #fff;
       margin-left: 0;
@@ -62,7 +62,11 @@
 
   .visible {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
+  }
+
+  .prev-slide {
+    transform: translateX(-100%);
   }
 
   .controls {

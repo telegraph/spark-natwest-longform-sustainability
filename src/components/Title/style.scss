@@ -1,5 +1,5 @@
 .title {
-  transition: 0.7s 0.4s;
+  transition: 0.7s;
   transform: translateX(-40%);
   flex-basis: 37%;
   margin: 0;
@@ -51,7 +51,7 @@
     img {
       display: inline-block;
       margin: 0;
-      height: 70px;
+      height: 90px;
     }
 
   }

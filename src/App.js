@@ -4,6 +4,8 @@ import "./App.scss";
 import { responsibilityTimeline } from "./data";
 import { trendsImpacting } from "./data";
 
+import analytics from './helpers/analytics';
+
 import Loader from "./components/Loader";
 import Header from "./components/Header";
 import Share from "./components/Share";
@@ -57,6 +59,10 @@ function App() {
     };
   });
 
+  useEffect(() => {
+    analytics.send('App Loaded');
+  }, []);
+
   return (
     <>
       <Header progress={progress} />
@@ -64,7 +70,7 @@ function App() {
         <div className="hero__content">
           <h1>The future of sustainability</h1>
           <p>
-            Corporate social responsibility is big business - but how can UK
+            Corporate social responsibility is big business — but how can UK
             business-owners embed sustainability into their workplace cultures?
           </p>
         </div>
@@ -77,7 +83,7 @@ function App() {
           </p>
         </Pullquote>
       </PullQuoteSpecial>
-      <Pagebody>
+      <Pagebody noPadding>
         <p>
           <Dropcap>T</Dropcap>
           hanks to television shows such as Sir David’s <em>Blue Planet II</em>, public
@@ -179,7 +185,7 @@ function App() {
             of the general population agreeing that business leaders should take
             a lead on these issues
           </h3>
-          <p>says James Robey, global head of sustainability, Capgemini</p>
+          <p>James Robey, global head of sustainability, Capgemini</p>
         </Pullquote>
         <AnimationTrigger>
           <p>
@@ -212,7 +218,7 @@ function App() {
             What is the purpose of our business, beyond the pursuit of profit? A
             cultural shift is taking place in boardrooms
           </h3>
-          <p>says Rob Cameron, SustainAbility</p>
+          <p>Rob Cameron, SustainAbility</p>
         </Pullquote>
       </Pagebody>
       <VerticalSlider />
@@ -273,7 +279,7 @@ function App() {
             becoming ever more important, with
           </p>
           <h3>
-            73.5% agree that sustainability is important, according to
+            73.5% agree that sustainability is important, according to
             NatWest research
           </h3>
         </Pullquote>
@@ -385,7 +391,7 @@ function App() {
             I can’t believe how much time I have spent in the past 25 years
             discussing whether sustainability is good or bad for business
           </h3>
-          <p>says Mr Gibbons</p>
+          <p>Giles Gibbons, founder of Good Business</p>
         </Pullquote>
         <AnimationTrigger>
         <p>
@@ -405,7 +411,7 @@ function App() {
             Our aim is for these leaders toinspire others that business can bea
             force for good
           </h3>
-          <p>says Mr Turner</p>
+          <p>Chris Turner, executive director of B Lab UK</p>
         </Pullquote>
         <AnimationTrigger>
           <p>
