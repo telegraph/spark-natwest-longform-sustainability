@@ -1,6 +1,6 @@
 const analytics = {
   send: (value = 'no value') => {
-    const CID = '2477';
+    const CID = '2287';
     const CIDLABEL = 'cid:';
     const { _satellite } = window;
 

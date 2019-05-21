@@ -130,6 +130,9 @@
         .arrow {
           width: 40px;
           padding-bottom: 40px;
+          &:hover {
+            background-color: #00b6be;
+          }
         }
 
         .total {

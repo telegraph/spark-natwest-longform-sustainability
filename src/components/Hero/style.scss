@@ -77,8 +77,9 @@
 
   h1 {
     font-family: 'RN House Sans', arial, sans-serif;
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 72px;
+    line-height: 73px;
+    font-weight: bold;
     color: #ffffff;
     text-align: left;
     opacity: 1;
@@ -87,7 +88,7 @@
 
 
     @media (max-width: 600px) {
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 
@@ -117,6 +118,12 @@
         display: block;
       }
     }
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  .hero {
+    padding-top: 20vh;
   }
 }
 
