@@ -11,10 +11,10 @@ function VerticalSlider() {
   const [data, setData] = useState([]);
   const [scrolled, setScrolled] = useState(0);
   const [conDimensions, setContainerDimensions] = useState(0);
-  const bubbleSlider = useRef(null);
   const [fixed, updateFixed] = useState(false);
   const [titleFade, triggerTitleFade] = useState(false);
 
+  const bubbleSlider = useRef(null);
   const bubbleTitle = useRef(null);
 
   const handleScroll = () => {
@@ -40,6 +40,7 @@ function VerticalSlider() {
 
   const grabData = () => {
     setData(verticalSlider);
+    // Set mouse position to state when hovering over slider
   };
 
   const amountScrolledandHeight = () => {

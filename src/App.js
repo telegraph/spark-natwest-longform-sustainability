@@ -435,7 +435,7 @@ function App() {
       </Pagebody>
       <CTA>
         <p>For more information visit the NatWest Rethinking Business Hub</p>
-        <Button link="https://natwestbusinesshub.com/content/rethinkingbusiness" />
+        <Button link="https://ad.doubleclick.net/ddm/trackclk/N8083.124621MSNUK/B22370404.240723500;dc_trk_aid=443465896;dc_trk_cid=105350124;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=" />
       </CTA>
       <Socials />
       <Broughttyb />

@@ -63,6 +63,15 @@
 
 }
 
+@media (min-width: 730px) and (max-width: 1180px) {
+  .title {
+    h2 {
+      font-size: 35px; 
+      line-height: 40px;
+    }
+  }
+}
+
 
 @media (max-width: 730px) {
   .title {

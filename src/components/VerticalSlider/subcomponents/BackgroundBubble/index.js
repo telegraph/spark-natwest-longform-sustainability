@@ -5,7 +5,8 @@ import './style.scss';
 function BackgroundBubble(props) {
 
   return (
-    <div className="box parallax" style={{ top: `${props.pos.top}`, left: `${props.pos.left}` }} />
+    <div className="box parallax" style={{ top: `${props.pos.top}`, left: `${props.pos.left}` }}
+    />
   );
 }
 
