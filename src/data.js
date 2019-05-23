@@ -235,7 +235,7 @@ export const verticalSlider = [
     copy:
       'Almost two-thirds of midsized businesses have invested in new technologies for energy efficiency, according to NatWest research',
     coordTop: '82',
-    coordRight: '75',
+    coordRight: '55',
   },
 ];
 
