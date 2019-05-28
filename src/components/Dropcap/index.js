@@ -2,16 +2,16 @@ import React from 'react';
 
 import './style.scss';
 
-const Dropcap = props => (
-  <div className="dropcap">
+const Dropcap = ({ children }) => (
+  <span className="dropcap">
     <span className="face top" />
     <span className="face left" />
     <span className="face right">
-      <p className="dropcap__letter">
-        {props.children}
-      </p>
+      <span className="dropcap__letter">
+        { children}
+      </span>
     </span>
-  </div>
+  </span>
 );
 
 export default Dropcap;

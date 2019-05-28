@@ -4,7 +4,8 @@
   height: 60px;
   
   .dropcap__letter {
-    transform: rotate(-112deg) skew(-21deg, 22deg) translate(15%, 0%);
+    position: absolute;
+    transform: rotate(-112deg) skew(-21deg, 22deg) translate(-5%, 26%);
     font-size: 30px;
     color: #fff;
     font-size: 25px;

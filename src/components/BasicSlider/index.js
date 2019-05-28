@@ -55,7 +55,7 @@ export default function BasicSlider() {
         </div>
         {data.map((item, i) => {
           return (
-            <Slide currentSlide={currentSlide} img={item.img} logo={item.logo} copy={item.copy} i={i} getHeight={grabSlideRefHeight} />
+            <Slide currentSlide={currentSlide} img={item.img} logo={item.logo} copy={item.copy} i={i} getHeight={grabSlideRefHeight} key={`basic-${i + 1}`} />
           );
         })}
       </div>

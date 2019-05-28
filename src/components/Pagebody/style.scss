@@ -18,9 +18,6 @@
   }
 
   .pagebody__content {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 1.3s 0.4s;
     display: flex;
     flex-flow: column;
   }

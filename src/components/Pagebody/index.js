@@ -6,14 +6,16 @@ import Title from '../Title';
 
 import './style.scss';
 
-function Pagebody(props) {
-  const [bodyContent, isVisible] = makeVisible();
+function Pagebody({
+  title, img, noPadding, children
+}) {
+  const [bodyContent] = makeVisible();
 
   return (
-    <div className={`pagebody ${!props.title ? 'pagebody--notitle' : ''} ${props.noPadding ? 'no-padding-top' : ''}`}>
-      {props.title ? <Title copy={props.title} img={props.img} /> : ''}
-      <div className={`pagebody__content ${props.title ? '' : 'pagebody__content--notitle'}`} ref={bodyContent} style={{ opacity: `${isVisible ? '1' : '0'}`, transform: `translateY(${isVisible ? '0' : '-20'})` }}>
-        {props.children}
+    <div className={`pagebody ${!title ? 'pagebody--notitle' : ''} ${noPadding ? 'no-padding-top' : ''}`}>
+      {title ? <Title copy={title} img={img} /> : ''}
+      <div className={`pagebody__content ${title ? '' : 'pagebody__content--notitle'}`} ref={bodyContent}>
+        {children}
       </div>
     </div>
   );

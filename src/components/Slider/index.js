@@ -10,7 +10,6 @@ function Slider() {
   const [items, setItems] = useState([]);
   const [currentItem, changeCurrentItem] = useState(0);
   const [itemProgress, changeItemProgress] = useState(0);
-  const [inputProgress, changeInputProgress] = useState(0);
 
   const points = useRef(null);
 
@@ -32,7 +31,7 @@ function Slider() {
     // On currentItem update
     calcItemProgress();
   }, [currentItem]);
-  
+
 
   function handleThis(e) {
     changeCurrentItem(parseInt(e.target.value, 10));
@@ -43,12 +42,12 @@ function Slider() {
   }
 
   function prevItem() {
-    let itemState = currentItem;
+    const itemState = currentItem;
     changeCurrentItem(itemState - 1);
   }
 
   function nextItem() {
-    let itemState = currentItem;
+    const itemState = currentItem;
     changeCurrentItem(itemState + 1);
   }
 
@@ -62,6 +61,7 @@ function Slider() {
         {items.map((item, i) => (
           <div
             className={`container__item ${currentItem === i ? 'visible' : ''}`}
+            key={`container-item-${i + 1}`}
           >
             {item.copy}
           </div>

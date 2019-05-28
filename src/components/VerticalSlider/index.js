@@ -90,9 +90,9 @@ function VerticalSlider() {
         <BackgroundBubble pos={{ top: '90%', left: '70vw' }} speed={100} conDimen={conDimensions} />
       </div>
       <div className="vertical-slider__container">
-        {data.map((item) => {
+        {data.map((item, i) => {
           return (
-            <Bubble right={item.coordRight} top={item.coordTop} title={item.stat} copy={item.copy} scrolled={scrolled} conDimen={conDimensions} />
+            <Bubble right={item.coordRight} top={item.coordTop} title={item.stat} copy={item.copy} scrolled={scrolled} conDimen={conDimensions} key={`bubble-${i + 1}`} />
           );
         })}
       </div>

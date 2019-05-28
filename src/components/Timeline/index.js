@@ -4,14 +4,16 @@ import BackgroundBubble from '../VerticalSlider/subcomponents/BackgroundBubble';
 
 import './style.scss';
 
-function Timeline(props) {
+function Timeline({ title, items }) {
+  // Set state
   const [fixed, updateFixed] = useState(false);
   const [titleFade, triggerTitleFade] = useState(false);
-
+  // DOM Refs
   const timeLine = useRef(null);
   const timelineTitle = useRef(null);
 
   const handleScroll = () => {
+    // Calculates when the timeline title should be fixed / when it should fade
     window.requestAnimationFrame(() => {
       const timeLineBB = timeLine.current.getBoundingClientRect();
       const timeLineTitleBB = timelineTitle.current.getBoundingClientRect();
@@ -32,20 +34,17 @@ function Timeline(props) {
     });
   };
 
-  const computedHeight = () => `${props.items.length * 100}vh`;
-
   useEffect(() => {
     // On mount
     window.addEventListener('scroll', handleScroll);
     return function cleanup() {
       window.removeEventListener('scroll', handleScroll);
-    }
-  });
+    };
+  }, []);
 
 
   return (
-
-    <div className="scrollGallery" ref={timeLine} style={{height: `${computedHeight}`}}>
+    <div className="scrollGallery" ref={timeLine}>
     <div id="parallax-container" className="bring-to-front">
         <BackgroundBubble pos={{ top: '5%', left: '5vw' }} />
         <BackgroundBubble pos={{ top: '6%', left: '100vw' }} />
@@ -81,13 +80,13 @@ function Timeline(props) {
         <BackgroundBubble pos={{ top: '85%', left: '5vw' }} />
       </div>
       <h3 className={`scrollGallery__title ${fixed ? 'fixed' : ''} ${titleFade ? 'fade' : ''}`} ref={timelineTitle}>
-        {props.title}
+        {title}
       </h3>
-      {props.items.map((item, i) => {
+      {items.map((item, i) => {
         return (
           <div className={`slides`} key={`slide-${i + 1}`}>
             <div className="text-box">
-            <img className="image" src={item.img} />
+            <img className="image" src={item.img} alt={item.date} />
               <h4>
                 {item.date}
               </h4>

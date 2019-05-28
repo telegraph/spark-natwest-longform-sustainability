@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from "react";
-import "./App.scss";
+import React, { useState, useEffect } from 'react';
 
-import { responsibilityTimeline } from "./data";
-import { trendsImpacting } from "./data";
+import './App.scss';
 
+import { responsibilityTimeline, trendsImpacting } from './data';
 import analytics from './helpers/analytics';
 
-import Loader from "./components/Loader";
-import Header from "./components/Header";
-import Share from "./components/Share";
-import Hero from "./components/Hero";
-import Pagebody from "./components/Pagebody";
-import Dropcap from "./components/Dropcap";
-import Pullquote from "./components/Pullquote";
+import Loader from './components/Loader';
+import Header from './components/Header';
+import Share from './components/Share';
+import Hero from './components/Hero';
+import Pagebody from './components/Pagebody';
+import Dropcap from './components/Dropcap';
+import Pullquote from './components/Pullquote';
 import PullQuoteSpecial from './components/Pullquote/subcomponents/PullQuoteSpecial';
-import CTA from "./components/CTA";
-import Button from "./components/Button";
-import Title from "./components/Title";
-import Timeline from "./components/Timeline";
-import Slider from "./components/Slider";
-import BasicSlider from "./components/BasicSlider";
-import VerticalSlider from "./components/VerticalSlider";
-import Related from "./components/Related";
-import Credits from "./components/Credits";
-import Footer from "./components/Footer";
+import CTA from './components/CTA';
+import Button from './components/Button';
+import Title from './components/Title';
+import Timeline from './components/Timeline';
+import Slider from './components/Slider';
+import BasicSlider from './components/BasicSlider';
+import VerticalSlider from './components/VerticalSlider';
+import Related from './components/Related';
+import Credits from './components/Credits';
+import Footer from './components/Footer';
 import Socials from './components/Socials';
 import AnimationTrigger from './components/AnimationTrigger';
 
-import heroImg from "./assets/hero_desktop.svg";
-import heroImgMobile from "./assets/hero_mobile.svg";
-import csrTitle from "./assets/titles/house_light.svg";
-import whydoTitle from "./assets/titles/doomsday_light.svg";
-import howcanTitle from "./assets/titles/bricks_dark.svg";
-import barriersTitle from "./assets/titles/oil_light.svg";
-import lookingTitle from "./assets/titles/car_light.svg";
-import Broughttyb from "./components/Broughttyb";
+import heroImg from './assets/hero_desktop.svg';
+import heroImgMobile from './assets/hero_mobile.svg';
+import csrTitle from './assets/titles/house_light.svg';
+import whydoTitle from './assets/titles/doomsday_light.svg';
+import howcanTitle from './assets/titles/bricks_dark.svg';
+import barriersTitle from './assets/titles/oil_light.svg';
+import lookingTitle from './assets/titles/car_light.svg';
+import Broughttyb from './components/Broughttyb';
 
 function App() {
   const [progress, setProgress] = useState(0);
@@ -42,10 +41,10 @@ function App() {
   const changeProgress = () => {
     window.requestAnimationFrame(() => {
       let progressState = progress;
-      const height = document.body.scrollHeight;
-      const scrolled = window.scrollY;
-      const difference = height + scrolled;
-      const percentage = difference / height - 1;
+      const docHeight = document.body.scrollHeight;
+      const scrolled = window.scrollY + window.innerHeight;
+      const difference = docHeight + scrolled;
+      const percentage = difference / docHeight - 1;
       progressState = percentage;
       setProgress(progressState);
     });
@@ -53,9 +52,9 @@ function App() {
 
   useEffect(() => {
     // on mount
-    document.addEventListener("scroll", changeProgress);
+    document.addEventListener('scroll', changeProgress);
     return function cleanup() {
-      document.removeEventListener("scroll", changeProgress);
+      document.removeEventListener('scroll', changeProgress);
     };
   });
 
@@ -84,56 +83,60 @@ function App() {
         </Pullquote>
       </PullQuoteSpecial>
       <Pagebody noPadding>
-        <p>
-          <Dropcap>T</Dropcap>
-          hanks to television shows such as Sir David’s <em>Blue Planet II</em>, public
-          awareness of issues like sustainability has never been higher.
-        </p>
-        <p>
-          This poses a new challenge and opportunity for businesses, as
-          customers and investors judge companies on their ethical and
-          sustainable credentials.
-        </p>
-        <p>
-          Dr Peter Jansen, principal lecturer at the London School of Business
-          and Finance, says: “Businesses are increasingly aware their reputation
-          depends on how socially and environmentally responsible they are
-          perceived to be.”
-        </p>
-        <p>
-          Research by NatWest found that Britain’s medium-sized businesses are
-          responding to this trend, with 57.5pc saying that sustainability is
-          “extremely” or “very” influential in their decision making*.
-        </p>
+        <AnimationTrigger>
+          <p>
+            <Dropcap>T</Dropcap>
+            hanks to television shows such as Sir David’s <em>Blue Planet II</em>, public
+            awareness of issues like sustainability has never been higher.
+          </p>
+          <p>
+            This poses a new challenge and opportunity for businesses, as
+            customers and investors judge companies on their ethical and
+            sustainable credentials.
+          </p>
+          <p>
+            Dr Peter Jansen, principal lecturer at the London School of Business
+            and Finance, says: “Businesses are increasingly aware their reputation
+            depends on how socially and environmentally responsible they are
+            perceived to be.”
+          </p>
+          <p>
+            Research by NatWest found that Britain’s medium-sized businesses are
+            responding to this trend, with 57.5pc saying that sustainability is
+            “extremely” or “very” influential in their decision making*.
+          </p>
+        </AnimationTrigger>
       </Pagebody>
       <Timeline
         title="Corporate and social responsibility timeline"
         items={responsibilityTimeline}
       />
       <Pagebody title="Corporate social responsibility" img={csrTitle}>
-        <p>
-          The mindset of companies has shifted since the emergence of corporate
-          social responsibility (CSR) programmes, says Rob Cameron, of
-          SustainAbility, a business consultancy.
-        </p>
-        <p>
-        “Business thinking about its role in society is not new,” says Mr
-          Cameron. “We might not have approved of the paternalistic approach of
-          Cadbury’s in the Victorian era, but it took a broad view of its
-          responsibilities, for instance housing workers.”
-        </p>
-        <p>
-          But in recent years, the movement towards corporate sustainability has
-          boomed. Fortune 500 companies spent $19.9bn (£15.08bn) on CSR in 2015,
-          according to Unesco.
-        </p>
-        <Pullquote>
-          <h3>
-            More than 90% of the world’s top 250 companies now produce an annual
-            report on CSR
-          </h3>
-          <p>according to KPMG</p>
-        </Pullquote>
+        <AnimationTrigger>
+          <p>
+            The mindset of companies has shifted since the emergence of corporate
+            social responsibility (CSR) programmes, says Rob Cameron, of
+            SustainAbility, a business consultancy.
+          </p>
+          <p>
+          “Business thinking about its role in society is not new,” says Mr
+            Cameron. “We might not have approved of the paternalistic approach of
+            Cadbury’s in the Victorian era, but it took a broad view of its
+            responsibilities, for instance housing workers.”
+          </p>
+          <p>
+            But in recent years, the movement towards corporate sustainability has
+            boomed. Fortune 500 companies spent $19.9bn (£15.08bn) on CSR in 2015,
+            according to Unesco.
+          </p>
+          <Pullquote>
+            <h3>
+              More than 90% of the world’s top 250 companies now produce an annual
+              report on CSR
+            </h3>
+            <p>according to KPMG</p>
+          </Pullquote>
+        </AnimationTrigger>
         <AnimationTrigger>
           <p>
             This change initially came from the environmental movement, Mr Cameron
@@ -167,18 +170,20 @@ function App() {
         title="Why do modern businesses need to be more sustainable?"
         img={whydoTitle}
       >
-        <p>
-          When scientists moved the hands of the Doomsday Clock to two minutes
-          to midnight this year, it was the closest the hands have stood to 12
-          (symbolising the end of the world) since the height of the Cold War
-          nuclear arms race.
-        </p>
-        <p>
-          We are running out of time to address climate change, the scientists
-          warned – so concerns about sustainability are becoming mainstream,
-          says James Robey, global head of sustainability at analyst firm
-          Capgemini.
-        </p>
+        <AnimationTrigger>
+          <p>
+            When scientists moved the hands of the Doomsday Clock to two minutes
+            to midnight this year, it was the closest the hands have stood to 12
+            (symbolising the end of the world) since the height of the Cold War
+            nuclear arms race.
+          </p>
+          <p>
+            We are running out of time to address climate change, the scientists
+            warned – so concerns about sustainability are becoming mainstream,
+            says James Robey, global head of sustainability at analyst firm
+            Capgemini.
+          </p>
+        </AnimationTrigger>
         <Pullquote quote>
           <h3>
             Edelman’s 2019 Trust barometer has shown an 11-point increase to 76%
@@ -226,26 +231,28 @@ function App() {
         title="How can mid-market businesses become more sustainable?"
         img={howcanTitle}
       >
-        <p>
-          The steps that companies can take to become more sustainable are not
-          enormously different to how businesses work day-to-day, says business
-          innovation expert Erica Wolfe-Murray.
-        </p>
-        <p>
-          The author of Simple Tips, Smart Ideas says: “Companies can apply
-          similar steps to address sustainability as they would normally take to
-          protect profits. The first step has to be an audit, looking at
-          internal systems before reviewing external supply. Heating, power
-          generation, water supply are all key areas.”
-        </p>
-        <p>
-          One of the first steps that companies should take is to audit their
-          supply chain, says Dr Jansen.
-        </p>
-        <p>
-          “Supply chains are responsible for most of the emissions that
-          aggravate climate change impacts,” he says.
-        </p>
+        <AnimationTrigger>
+          <p>
+            The steps that companies can take to become more sustainable are not
+            enormously different to how businesses work day-to-day, says business
+            innovation expert Erica Wolfe-Murray.
+          </p>
+          <p>
+            The author of Simple Tips, Smart Ideas says: “Companies can apply
+            similar steps to address sustainability as they would normally take to
+            protect profits. The first step has to be an audit, looking at
+            internal systems before reviewing external supply. Heating, power
+            generation, water supply are all key areas.”
+          </p>
+          <p>
+            One of the first steps that companies should take is to audit their
+            supply chain, says Dr Jansen.
+          </p>
+          <p>
+            “Supply chains are responsible for most of the emissions that
+            aggravate climate change impacts,” he says.
+          </p>
+        </AnimationTrigger>
         <Pullquote quote>
           <h3>
             About 60% of the carbon footprint of a manufacturing company is in
@@ -309,12 +316,14 @@ function App() {
         title="Barriers and opportunities for sustainability in midsized companies"
         img={barriersTitle}
       >
-        <p>
-          Becoming sustainable is not without pitfalls. Last year, supermarket
-          chain Iceland partnered with Greenpeace on an advert about palm oil,
-          but campaigners then claimed that the chain had not removed palm oil
-          from all its own products.
-        </p>
+        <AnimationTrigger>
+          <p>
+            Becoming sustainable is not without pitfalls. Last year, supermarket
+            chain Iceland partnered with Greenpeace on an advert about palm oil,
+            but campaigners then claimed that the chain had not removed palm oil
+            from all its own products.
+          </p>
+        </AnimationTrigger>
         <Pullquote quote>
           <p>Martin Newman, chairman of the Customer First Group, says:</p>
           <h3>Practise what you preach</h3>
@@ -373,19 +382,21 @@ function App() {
       </Pagebody>
       <BasicSlider />
       <Pagebody title="Looking to the future" img={lookingTitle}>
-        <p>
-          “I could never understand why we were having the conversation. If you
-          can do things a better way, why not?
-        </p>
-        <p>
-          “But the resistance has broadly gone away. Millennials are now the
-          decision makers as well as the consumers, and they are saying, ‘We
-          want to take this seriously.’ ”
-        </p>
-        <p>
-          In fact, by next year millennials will make up more than a third of
-          the workforce worldwide, according to research by ManpowerGroup.
-        </p>
+        <AnimationTrigger>
+          <p>
+            “I could never understand why we were having the conversation. If you
+            can do things a better way, why not?
+          </p>
+          <p>
+            “But the resistance has broadly gone away. Millennials are now the
+            decision makers as well as the consumers, and they are saying, ‘We
+            want to take this seriously.’ ”
+          </p>
+          <p>
+            In fact, by next year millennials will make up more than a third of
+            the workforce worldwide, according to research by ManpowerGroup.
+          </p>
+        </AnimationTrigger>
         <Pullquote quote>
           <h3>
             I can’t believe how much time I have spent in the past 25 years
