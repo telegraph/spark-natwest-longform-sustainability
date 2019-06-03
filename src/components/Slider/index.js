@@ -28,7 +28,7 @@ function Slider() {
   }, []);
 
   useEffect(() => {
-    // On currentItem update
+    // Whenever currentItem is updated...
     calcItemProgress();
   }, [currentItem]);
 
@@ -68,11 +68,11 @@ function Slider() {
         ))}
       </div>
       <div className="slider__progress-mobile">
-        <div className={`slider-cont slider-prev ${currentItem < 1 ? 'noclick' : ''}`} onClick={() => prevItem()} />
+        <div role="button" className={`slider-cont slider-prev ${currentItem < 1 ? 'noclick' : ''}`} onClick={() => prevItem()} />
         <div className="slider-total">
           {`${currentItem + 1} of ${items.length}`}
         </div>
-        <div className={`slider-cont slider-next ${currentItem >= 16 ? 'noclick' : ''}`} onClick={() => nextItem()} />
+        <div role="button" className={`slider-cont slider-next ${currentItem >= 16 ? 'noclick' : ''}`} onClick={() => nextItem()} />
       </div>
       <div className="slider__progress">
         <div className="progress-points" ref={points}>

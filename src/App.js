@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
+// Styles
 import './App.scss';
-
+// Data & external methods
 import { responsibilityTimeline, trendsImpacting } from './data';
 import analytics from './helpers/analytics';
 
+// Components
 import Loader from './components/Loader';
 import Header from './components/Header';
 import Share from './components/Share';
@@ -26,6 +27,7 @@ import Footer from './components/Footer';
 import Socials from './components/Socials';
 import AnimationTrigger from './components/AnimationTrigger';
 
+// Assets
 import heroImg from './assets/hero_desktop.svg';
 import heroImgMobile from './assets/hero_mobile.svg';
 import csrTitle from './assets/titles/house_light.svg';
