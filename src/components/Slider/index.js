@@ -6,7 +6,7 @@ import officeSliderCube from '../../assets/office-slider-cube.svg';
 
 import './style.scss';
 
-function Slider() {
+function Slider({ link }) {
   const [items, setItems] = useState([]);
   const [currentItem, changeCurrentItem] = useState(0);
   const [itemProgress, changeItemProgress] = useState(0);
@@ -52,7 +52,7 @@ function Slider() {
   }
 
   return (
-    <div className="slider">
+    <div className="slider" id={link || ''}>
       <h2 className="slider__title">
         The sustainable office
       </h2>

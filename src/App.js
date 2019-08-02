@@ -111,6 +111,7 @@ function App() {
       </Pagebody>
       <Timeline
         title="Corporate and social responsibility timeline"
+        link="timeline"
         items={responsibilityTimeline}
       />
       <Pagebody title="Corporate social responsibility" img={csrTitle}>
@@ -167,7 +168,7 @@ function App() {
           </p>
         </AnimationTrigger>
       </Pagebody>
-      <Slider />
+      <Slider link="office" />
       <Pagebody
         title="Why do modern businesses need to be more sustainable?"
         img={whydoTitle}
@@ -313,6 +314,7 @@ function App() {
       <Timeline
         title="Sustainability trends that are impacting businesses"
         items={trendsImpacting}
+        link="trends"
       />
       <Pagebody
         title="Barriers and opportunities for sustainability in midsized companies"

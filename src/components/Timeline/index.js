@@ -4,7 +4,7 @@ import BackgroundBubble from '../VerticalSlider/subcomponents/BackgroundBubble';
 
 import './style.scss';
 
-function Timeline({ title, items }) {
+function Timeline({ title, items, link }) {
   // Set state
   const [fixed, updateFixed] = useState(false);
   const [titleFade, triggerTitleFade] = useState(false);
@@ -44,7 +44,7 @@ function Timeline({ title, items }) {
 
 
   return (
-    <div className="scrollGallery" ref={timeLine}>
+    <div className="scrollGallery" ref={timeLine} id={link ? link : '' }>
     <div id="parallax-container" className="bring-to-front">
         <BackgroundBubble pos={{ top: '5%', left: '5vw' }} />
         <BackgroundBubble pos={{ top: '6%', left: '100vw' }} />
